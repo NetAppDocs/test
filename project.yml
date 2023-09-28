@@ -1,4 +1,4 @@
-jekyll: srd23-stable-12
+jekyll: gtome-analytics-poc
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
