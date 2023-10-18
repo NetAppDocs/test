@@ -1,4 +1,5 @@
 settings:
+  jekyll: bnorberg-commit-api
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
   platform: cloud
