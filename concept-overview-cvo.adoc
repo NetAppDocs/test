@@ -15,7 +15,7 @@ summary: Cloud Volumes ONTAP enables you to optimize your cloud storage costs an
 [.lead]
 Cloud Volumes ONTAP enables you to optimize your cloud storage costs and performance while enhancing data protection, security, and compliance.
 
-Cloud Volumes ONTAP is a software-only storage appliance that runs ONTAP data management software in the cloud. It provides enterprise-grade storage with the following key features as follows:
+Cloud Volumes ONTAP is a software-only storage appliance that runs ONTAP data management software in the cloud. It provides enterprise-grade storage with the following key features as follows for next test:
 
 * Storage efficiencies
 +
