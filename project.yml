@@ -1,4 +1,4 @@
-jekyll: bnorberg-apostrophe
+jekyll: bnorberg-bot-summary
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
