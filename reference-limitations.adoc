@@ -34,3 +34,42 @@ link:concept-client-protocols.html[Learn more about Cloud Volumes ONTAP support 
 BlueXP doesn't provide any setup or orchestration support for storage VM (SVM) disaster recovery. You must use System Manager or the CLI.
 
 link:task-manage-svm-dr.html[Learn more about SVM disaster recovery].
+
+== Testing AsciiDoc character replacement and intrinsic attributes
+Testing end-to-end through localization and publishing of all languages. 
+
+.Asterisk 
+{asterisk}
+Text{asterisk}
+Text {asterisk}
+Text {asterisk} text
+
+.Double colon
+{two-colons}
+Text{two-colons}
+Text {two-colons}
+Text {two-colons} text
+
+.Vertical bar
+{vbar}
+Text{vbar}
+Text {vbar}
+Text {vbar} text
+
+.Plus
+{plus}
+Text{plus}
+Text {plus}
+Text {plus} text
+
+.Square brackets
+{startsb} and {endsb}
+Text{startsb} and text{endsb}
+Text {startsb} and text {endsb}
+Text {startsb} and text {endsb} text
+
+.Non-breaking space
+Before{nbsp}After
+
+.Zero-width space
+Before{zwsp}After
