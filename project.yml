@@ -1,341 +1,38 @@
-jekyll: bn-cqpload-fixes
+---
 settings:
-  name: Cloud Volumes ONTAP
+  name: NetApp Solutions
   harmony_integration: maestro
-  platform: cloud
   internal:
-    pdf_enabled: true
+    pdf_enabled: false 
   prod:
-    pdf_enabled: true
-    harmony_enabled: true
-  rss_page: "whats-new.html"
-  versions:
-    - name: Cloud Volumes ONTAP 
-      url: /cloud-volumes-ontap-relnotes
-      version-number: "9.13.1"
-    - name: Cloud Volumes ONTAP 
-      url: /cloud-volumes-ontap-9130-relnotes
-      version-number: "9.13.0"
-    - name: Cloud Volumes ONTAP 
-      url: /cloud-volumes-ontap-9121-relnotes
-      version-number: "9.12.1"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-9120-relnotes
-      version-number: "9.12.0"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-9111-relnotes
-      version-number: "9.11.1"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-9110-relnotes
-      version-number: "9.11.0"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-9101-relnotes
-      version-number: "9.10.1"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-9100-relnotes
-      version-number: "9.10.0"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-991-relnotes
-      version-number: "9.9.1"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-990-relnotes
-      version-number: "9.9.0"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-98-relnotes
-      version-number: "9.8"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-97-relnotes
-      version-number: "9.7"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-96-relnotes
-      version-number: "9.6"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-95-relnotes
-      version-number: "9.5"
-    - name: Cloud Volumes ONTAP
-      url: /cloud-volumes-ontap-94-relnotes
-      version-number: "9.4"
-    - name: ONTAP Cloud
-      url: /cloud-volumes-ontap-93-relnotes
-      version-number: "9.3"
-  filter:
-    label: Cloud provider
-    default: All cloud providers
-    options:
-      - name: Amazon Web Services
-        alias: AWS
-        id: aws
-      - name: Google Cloud
-        alias: Google Cloud
-        id: gcp
-      - name: Microsoft Azure
-        alias: Azure
-        id: azure
+    pdf_enabled: false
+    harmony_enabled: false
+    lipi_enabled: false
 sidebar:
   entries:
-    - title: Cloud Volumes ONTAP docs
-      url: /index.html
-    - title: Release notes
+    - title: "NetApp Solutions Documentation"
+      url: index.html
+    - section: ai
+    - section: containers
+    - section: data-access
+    - title: "Enterprise Applications"
       entries:
-        - title: What's new
-          url: /whats-new.html
-        - title: Known limitations
-          url: /reference-limitations.html
-        - title: Cloud Volumes ONTAP Release Notes
-          url: /whats-new-ontap.html
-    - title: Get started
-      entries:
-        - title: Learn about Cloud Volumes ONTAP
-          url: /concept-overview-cvo.html
-        - title: Supported versions for new deployments
-          url: /reference-versions.html
-        - title: Get started in Amazon Web Services
-          flavor: aws
-          entries:
-            - title: Quick start
-              url: /task-getting-started-aws.html
-            - title: Plan your configuration
-              url: /task-planning-your-config.html
-            - title: Set up your networking
-              entries:
-                - title: Networking requirements
-                  url: /reference-networking-aws.html
-                - title: Set up an AWS transit gateway
-                  url: /task-setting-up-transit-gateway.html
-                - title: Deploy an HA pair in a shared subnet
-                  url: /task-deploy-aws-shared-vpc.html
-                - title: Security group rules for AWS
-                  url: /reference-security-groups.html
-            - title: Set up the AWS KMS
-              url: /task-setting-up-kms.html
-            - title: Set up IAM roles
-              url: /task-set-up-iam-roles.html
-            - title: Set up licensing
-              url: /task-set-up-licensing-aws.html
-            - title: Launch Cloud Volumes ONTAP in AWS
-              url: /task-deploying-otc-aws.html
-            - title: Get started in AWS C2S
-              url: /task-getting-started-aws-c2s.html
-        - title: Get started in Microsoft Azure
-          flavor: azure
-          entries:
-            - title: Quick start
-              url: /task-getting-started-azure.html
-            - title: Plan your configuration
-              url: /task-planning-your-config-azure.html
-            - title: Set up your networking
-              url: /reference-networking-azure.html
-            - title: Set up encryption using your key
-              url: /task-set-up-azure-encryption.html
-            - title: Set up licensing
-              url: /task-set-up-licensing-azure.html
-            - title: Enable high availability mode
-              url: /task-azure-high-availability-mode.html
-            - title: Launch Cloud Volumes ONTAP in Azure
-              url: /task-deploying-otc-azure.html                                 
-        - title: Get started in Google Cloud
-          flavor: gcp
-          entries:
-            - title: Quick start
-              url: /task-getting-started-gcp.html
-            - title: Plan your configuration
-              url: /task-planning-your-config-gcp.html
-            - title: Set up your networking
-              url: /reference-networking-gcp.html
-            - title: Plan for VPC Service Controls
-              url: /reference-vpc-service-controls-gcp.html
-            - title: Create a service account
-              url: /task-creating-gcp-service-account.html
-            - title: Use customer-managed encryption keys
-              url: /task-setting-up-gcp-encryption.html
-            - title: Set up licensing
-              url: /task-set-up-licensing-google.html
-            - title: Launch Cloud Volumes ONTAP in Google Cloud
-              url: /task-deploying-gcp.html
-            - title: Google Cloud Platform Image Verification
-              entries:
-                - title: Overview
-                  url: /concept-gcp-image-verification.html
-                - title: Convert image to Raw format on GCP
-                  url: /task-gcp-convert-image-raw.html
-                - title: Image signature verification
-                  entries:
-                    - title: Verify GCP signed images
-                      url: /concept-gcp-verify-signed-image.html
-                    - title: Verify contents using OpenSSL
-                      url: /task-verify-openssl-gcp.html
-    - title: Use Cloud Volumes ONTAP
-      entries:
-        - title: License management
-          entries:
-            - title: Manage capacity-based licenses
-              url: /task-manage-capacity-licenses.html
-            - title: Manage Keystone Subscriptions
-              url: /task-manage-keystone.html
-            - title: Manage node-based licenses
-              url: /task-manage-node-licenses.html
-        - title: Volume and LUN administration
-          entries:
-            - title: Create volumes
-              url: /task-create-volumes.html
-            - title: Manage existing volumes
-              url: /task-manage-volumes.html
-            - title: Tier inactive data to object storage
-              url: /task-tiering.html
-            - title: Connect a LUN to a host
-              url: /task-connect-lun.html
-            - title: Accelerate data access with FlexCache
-              url: /task-accelerate-data-access.html
-        - title: Aggregate administration
-          entries:
-            - title: Create aggregates
-              url: /task-create-aggregates.html
-            - title: Manage existing aggregates
-              url: /task-manage-aggregates.html
-            - title: Manage capacity settings
-              url: /task-manage-capacity-settings.html
-        - title: Storage VM administration
-          entries:
-            - title: Work with storage VMs in BlueXP
-              url: /task-managing-svms.html
-            - title: Create storage VMs in AWS
-              flavor: aws
-              url: /task-managing-svms-aws.html
-            - title: Create storage VMs in Azure
-              flavor: azure
-              url: /task-managing-svms-azure.html
-            - title: Create storage VMs in Google Cloud
-              flavor: gcp
-              url: /task-managing-svms-gcp.html
-            - title: Set up SVM disaster recovery
-              url: /task-manage-svm-dr.html
-        - title: Security and data encryption
-          entries:
-            - title: Encrypt volumes with NetApp encryption
-              url: /task-encrypting-volumes.html
-            - title: Manage keys with AWS Key Management Service
-              flavor: aws
-              url: /task-aws-key-management.html
-            - title: Manage keys with Azure Key Vault
-              flavor: azure
-              url: /task-azure-key-vault.html
-            - title: Manage keys with Google Cloud KMS
-              flavor: gcp
-              url: /task-google-key-manager.html
-            - title: Improve ransomware protection
-              url: /task-protecting-ransomware.html
-        - title: System administration
-          entries:
-            - title: Upgrade Cloud Volumes ONTAP
-              url: /task-updating-ontap-cloud.html
-            - title: Register pay-as-you-go systems
-              url: /task-registering.html
-            - title: Stop and start a system
-              url: /task-managing-state.html
-            - title: Synchronize system time
-              url: /task-sync-time.html
-            - title: Modify system write speed
-              url: /task-modify-write-speed.html
-            - title: Change the system password
-              url: /task-change-password.html
-            - title: Add, remove, or delete systems
-              entries:
-                - title: Add an existing system
-                  url: /task-adding-systems.html
-                - title: Remove a working environment
-                  url: /task-removing.html
-                - title: Delete a system
-                  url: /task-deleting-working-env.html
-            - title: AWS administration
-              flavor: aws
-              entries:
-                - title: Change the EC2 instance type
-                  url: /task-change-ec2-instance.html
-                - title: Change route tables for HA pairs
-                  url: /task-change-route-tables.html
-                - title: Configure placement group creation
-                  url: task-configure-placement-group-failure-aws.html      
-            - title: Azure administration
-              flavor: azure
-              entries:
-                - title: Change the Azure VM type
-                  url: /task-change-azure-vm.html
-                - title: Override CIFS locks
-                  url: /task-overriding-cifs-locks.html
-                - title: Use an Azure Private Link or service endpoints
-                  url: /task-enabling-private-link.html
-                - title: Move resource groups 
-                  url: /task-moving-resource-groups-azure.html 
-            - title: Google Cloud administration
-              flavor: gcp
-              entries:
-                - title: Change the machine type
-                  url: /task-change-gcp-machine.html
-            - title: Administration from System Manager
-              url: /task-administer-advanced-view.html
-            - title: Administration from the CLI
-              url: /task-connecting-to-otc.html
-        - title: System health and events
-          entries:
-            - title: Verify AutoSupport setup
-              url: /task-verify-autosupport.html
-            - title: Configure EMS
-              url: /task-configure-ems.html
-    - title: Concepts
-      entries:
-        - title: Licensing
-          url: /concept-licensing.html
-        - title: Storage
-          entries:
-            - title: Client protocols
-              url: /concept-client-protocols.html
-            - title: Disks and aggregates
-              url: /concept-storage.html
-            - title: Elastic Volumes in AWS
-              flavor: aws
-              url: /concept-aws-elastic-volumes.html
-            - title: Data tiering
-              url: /concept-data-tiering.html
-            - title: Storage management
-              url: /concept-storage-management.html
-            - title: Write speed
-              url: /concept-write-speed.html
-            - title: Flash Cache
-              url: /concept-flash-cache.html
-            - title: WORM storage
-              url: /concept-worm.html
-        - title: High-availability pairs
-          entries:
-            - title: HA pairs in AWS
-              flavor: aws
-              url: /concept-ha.html
-            - title: HA pairs in Azure
-              flavor: azure
-              url: /concept-ha-azure.html
-            - title: HA pairs in GCP
-              flavor: gcp
-              url: /concept-ha-google-cloud.html
-            - title: Actions during storage takeover
-              url: /concept-degraded-ha-pair.html
-        - title: Security
-          url: /concept-security.html
-        - title: Performance
-          url: /concept-performance.html
-        - title: Management of node-based BYOL
-          url: /concept-license-management.html
-        - title: AutoSupport and Active IQ Digital Advisor
-          url: /concept-active-iq.html
-        - title: Default configurations
-          url: /reference-default-configs.html
-    - title: Knowledge and support
-      entries:
-        - title: Register for support
-          url: /task-support-registration.html
-        - title: Get help
-          url: /task-get-help.html
-    - title: Legal notices
-      url: /legal-notices.html
-product-family:
-  name: BlueXP
-  repo: bluexp-family
-  sidebar_label: All BlueXP documentation
+        - title: "SAP & SAP HANA"
+          url: https://docs.netapp.com/us-en/netapp-solutions-sap/
+    - section: databases
+    - section: data-analytics
+    - section: ehc
+    - section: vmw-sc
+    - section: rhhc
+    - section: virtualization
+    - section: automation
+    - title: "FlexPod Solutions"
+      url: https://docs.netapp.com/us-en/flexpod/
+    - title: "Legacy NetApp HCI Solutions"
+      url: https://docs.netapp.com/us-en/hci-solutions/
+    - title: "Change Log"
+      url: change-log-display.html
+    - title: "About NetApp Solutions"
+      url: about.html
+    - title: "Legal Notices"
+      url: legal-notices.html

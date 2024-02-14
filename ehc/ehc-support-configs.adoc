@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: ehc/ehc-support-configs.html
+keywords: NetApp Solutions, ehc, enterprise hybrid cloud, hyperscalers, vmware, supported config, config, configuration
+summary:
+---
+
+= Supported Configurations for NetApp Hybrid Multicloud with VMware
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./../media/
+
+[.lead]
+Understanding the combinations for NetApp storage support in the major hyperscalers.
+
+[width=60%, cols="10%, 45%, 45%", frame=none, grid=rows]
+|===
+| ^| *Guest Connected* ^| *Supplemental NFS Datastore*
+//
+.^| *AWS*
+^| CVO
+FSx ONTAP
+link:aws/aws-guest.html[Details]
+^| FSx ONTAP
+link:aws/aws-native-overview.html[Details]
+//
+.^| *Azure*
+^| CVO
+ANF
+link:azure/azure-guest.html[Details]
+^| ANF
+link:azure/azure-native-overview.html[Details]
+//
+.^| *GCP*
+^| CVO
+CVS
+link:gcp/gcp-guest.html[Details]
+^| CVS
+link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/[Details]
+|===

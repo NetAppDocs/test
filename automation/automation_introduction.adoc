@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: automation/automation_introduction.html
+summary: NetApp solutions automation enables the customer to automate the deployment, configuration and execution of many common infrastrucure and application tasks.
+keywords: netapp, solutions, automation, ansible, terraform
+---
+
+= NetApp Solution Automation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:table-stripes: odd
+:imagesdir: ./media/
+
+[.lead]
+== Introduction
+
+In providing solutions to meet today's business challenges, NetApp delivers solutions with the following goals:
+
+* Providing validated deployment and configuration steps,
+* Providing solutions that are easily consumable,
+* Providing solution deployment that has a predictable outcome, is easily repeated, and scalable across a customer's enterprise.
+
+In order to achieve these goals, it is paramount that the deployment and configuration of infrastructure and/or applications delivered through our solutions is simplified through automation. NetApp is committed to simplifying solution consumption through automation.
+
+Utilizing open-source automation tools such as Red Hat Ansible, HashiCorp Terraform, or Microsoft Powershell, NetApp solutions have the ability to automate application deployment, cloud provisioning, configuration management, and many other common IT tasks. NetApp's solutions take advantage of publicly available automation artifacts - as well as providing NetApp authored automation - to simplify the overall deployment of a solution.
+
+Where automation capabilities are available, the solution collateral will guide the user through the process for automating the solution or solution steps via the specific automation tool(s).

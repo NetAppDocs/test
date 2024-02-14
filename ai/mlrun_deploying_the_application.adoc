@@ -1,0 +1,22 @@
+---
+sidebar: sidebar
+permalink: ai/mlrun_deploying_the_application.html
+keywords: NetApp Deploying Application
+summary:
+---
+= Deploying the Application
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./../media/
+
+//
+// This file was created with NDAC Version 2.0 (August 17, 2020)
+//
+// 2020-08-19 15:22:25.775854
+//
+
+[.lead]
+The following sections describe how to install and deploy the application.
+
