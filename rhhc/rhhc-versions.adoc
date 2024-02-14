@@ -1,0 +1,107 @@
+---
+sidebar: sidebar
+permalink: rhhc/rhhc-versions.html
+keywords: NetApp Solutions, hybrid cloud, container workloads, containers, Red Hat OpenShift, RedHat OpenShift, vmware, ROSA, ACC, Astra Control Center, Advanced Cluster Management, ACM, Hub Cluster
+summary:
+---
+
+= Versions of various components used in the solution validation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./../media/
+
+[.lead]
+The solution tests and validates Migration & Centralized Data Protection with OpenShift container platform, OpenShift Advanced Cluster Manager, NetApp ONTAP, and NetApp Astra Control Center.
+
+Scenarios 1, 2 and 3 of the solution were validated using the versions as shown in the table below:
+
+[width=100%, cols="25%, 75%", frame=none, grid=rows]
+|===
+| *Component* ^| *Version* 
+//
+.^| *VMware*
+^| vSphere Client version 8.0.0.10200
+VMware ESXi, 8.0.0, 20842819
+//
+.^| *Hub Cluster*
+^| OpenShift 4.11.34
+//
+.^| *Source and Destination Clusters*
+^| OpenShift 4.12.9
+on-premises and in AWS
+//
+.^| *NetApp Astra Trident*
+^| Trident Server and Client 23.04.0
+//
+.^| *NetApp Astra Control Center*
+^| ACC 22.11.0-82
+//
+.^| *NetApp ONTAP*
+^| ONTAP 9.12.1
+//
+.^| *AWS FSx for NetApp ONTAP*
+^| Single AZ
+//
+|===
+
+Scenario 4 of the solution was validated using the versions as shown in the table below:
+
+[width=100%, cols="25%, 75%", frame=none, grid=rows]
+|===
+| *Component* ^| *Version* 
+//
+.^| *VMware*
+^| vSphere Client version 8.0.2.00000
+VMware ESXi, 8.0.2, 22380479
+//
+.^| *Hub Cluster*
+^| OpenShift 4.13.13
+//
+.^| *Source and Destination Clusters*
+^| OpenShift 4.13.12
+on-premises and in Google Cloud
+//
+.^| *NetApp Astra Trident*
+^| Trident Server and Client 23.07.0
+//
+.^| *NetApp Astra Control Center*
+^| ACC 23.07.0-25
+//
+.^| *NetApp ONTAP*
+^| ONTAP 9.12.1
+//
+.^| *Cloud Volumes ONTAP*
+^| Single AZ, Single node,9.14.0
+//
+|===
+
+Scenario 5 of the solution was validated using the versions as shown in the table below:
+
+[width=100%, cols="25%, 75%", frame=none, grid=rows]
+|===
+| *Component* ^| *Version* 
+//
+.^| *VMware*
+^| vSphere Client version 8.0.2.00000
+VMware ESXi, 8.0.2, 22380479
+//
+.^| *Source and Destination Clusters*
+^| OpenShift 4.13.25
+on-premises and in Azure
+//
+.^| *NetApp Astra Trident*
+^| Trident Server and Client and Astra Control Provisioner 23.10.0
+//
+.^| *NetApp Astra Control Center*
+^| ACC 23.10
+//
+.^| *NetApp ONTAP*
+^| ONTAP 9.12.1
+//
+.^| *Cloud Volumes ONTAP*
+^| Single AZ, Single node,9.14.0
+//
+|===
+

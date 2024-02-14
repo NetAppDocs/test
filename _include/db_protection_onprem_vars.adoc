@@ -1,0 +1,116 @@
+[source, shell]
+----
+# Oracle Data Protection global user configuration variables
+# Ontap env specific config variables
+hosts_group: "ontap"
+ca_signed_certs: "false"
+
+# Inter-cluster LIF details
+src_nodes:
+  - "AFF-01"
+  - "AFF-02"
+
+dst_nodes:
+  - "DR-AFF-01"
+  - "DR-AFF-02"
+
+create_source_intercluster_lifs: "yes"
+
+source_intercluster_network_port_details:
+  using_dedicated_ports: "yes"
+  using_ifgrp: "yes"
+  using_vlans: "yes"
+  failover_for_shared_individual_ports: "yes"
+  ifgrp_name: "a0a"
+  vlan_id: "10"
+  ports:
+    - "e0b"
+    - "e0g"
+  broadcast_domain: "NFS"
+  ipspace: "Default"
+  failover_group_name: "iclifs"
+
+source_intercluster_lif_details:
+  - name: "icl_1"
+    address: "10.0.0.1"
+    netmask: "255.255.255.0"
+    home_port: "a0a-10"
+    node: "AFF-01"
+  - name: "icl_2"
+    address: "10.0.0.2"
+    netmask: "255.255.255.0"
+    home_port: "a0a-10"
+    node: "AFF-02"
+
+create_destination_intercluster_lifs: "yes"
+
+destination_intercluster_network_port_details:
+  using_dedicated_ports: "yes"
+  using_ifgrp: "yes"
+  using_vlans: "yes"
+  failover_for_shared_individual_ports: "yes"
+  ifgrp_name: "a0a"
+  vlan_id: "10"
+  ports:
+    - "e0b"
+    - "e0g"
+  broadcast_domain: "NFS"
+  ipspace: "Default"
+  failover_group_name: "iclifs"
+
+destination_intercluster_lif_details:
+  - name: "icl_1"
+    address: "10.0.0.3"
+    netmask: "255.255.255.0"
+    home_port: "a0a-10"
+    node: "DR-AFF-01"
+  - name: "icl_2"
+    address: "10.0.0.4"
+    netmask: "255.255.255.0"
+    home_port: "a0a-10"
+    node: "DR-AFF-02"
+
+# Variables for SnapMirror Peering
+passphrase: "your-passphrase"
+
+# Source & Destination List
+dst_cluster_name: "dst-cluster-name"
+dst_cluster_ip: "dst-cluster-ip"
+dst_vserver: "dst-vserver"
+dst_nfs_lif: "dst-nfs-lif"
+src_cluster_name: "src-cluster-name"
+src_cluster_ip: "src-cluster-ip"
+src_vserver: "src-vserver"
+
+# Variable for Oracle Volumes and SnapMirror Details
+cg_snapshot_name_prefix: "oracle"
+src_orabinary_vols:
+  - "binary_vol"
+src_db_vols:
+  - "db_vol"
+src_archivelog_vols:
+  - "log_vol"
+snapmirror_policy: "async_policy_oracle"
+
+# Export Policy Details
+export_policy_details:
+  name: "nfs_export_policy"
+  client_match: "0.0.0.0/0"
+  ro_rule: "sys"
+  rw_rule: "sys"
+
+# Linux env specific config variables
+mount_points:
+  - "/u01"
+  - "/u02"
+  - "/u03"
+hugepages_nr: "1234"
+redhat_sub_username: "xxx"
+redhat_sub_password: "xxx"
+
+# DB env specific install and config variables
+recovery_type: "scn"
+control_files:
+  - "/u02/oradata/CDB2/control01.ctl"
+  - "/u03/orareco/CDB2/control02.ctl"
+----

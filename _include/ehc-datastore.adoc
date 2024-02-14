@@ -1,0 +1,86 @@
+
+// tag::all[]
+
+[role="tabbed-block"]
+====
+.AWS / VMC
+--
+//***********************************
+//* AWS DataStore Support           *
+//***********************************
+
+// tag::aws-datastore[]
+
+AWS supports NetApp storage in the following configurations:
+
+* FSx ONTAP as guest connected storage
+* Cloud Volumes ONTAP (CVO) as guest connected storage
+* FSx ONTAP as a supplemental NFS datastore
+
+// tag::ehc-aws[]
+View the detailed link:aws/aws-guest.html[guest connect storage options for VMC].
+View the detailed link:aws/aws-native-nfs-datastore-option.html[supplemental NFS datastore options for VMC].
+// end::ehc-aws[]
+
+// tag::aws[]
+View the detailed link:aws-guest.html[guest connect storage options for VMC].
+View the detailed link:aws-native-nfs-datastore-option.html[supplemental NFS datastore options for VMC].
+// end::aws[]
+// end::aws-datastore[]
+--
+.Azure / AVS
+--
+//***********************************
+//* Azure Datastore Support         *
+//***********************************
+
+// tag::azure-datastore[]
+
+Azure supports NetApp storage in the following configurations:
+
+* Azure NetApp Files (ANF) as guest connected storage
+* Cloud Volumes ONTAP (CVO) as guest connected storage
+* Azure NetApp Files (ANF) as a supplemental NFS datastore
+
+// tag::ehc-azure[]
+View the detailed link:azure/azure-guest.html[guest connect storage options for AVS].
+View the detailed link:azure/azure-native-nfs-datastore-option.html[supplemental NFS datastore options for AVS].
+// end::ehc-azure[]
+
+// tag::azure[]
+View the detailed link:azure-guest.html[guest connect storage options for AVS].
+View the detailed link:azure-native-nfs-datastore-option.html[supplemental NFS datastore options for AVS].
+
+// end::azure[]
+// end::azure-datastore[]
+--
+.GCP / GCVE
+--
+//***********************************
+//* Google Cloud Datastore Support  *
+//***********************************
+
+// tag::gcp-datastore[]
+
+Google Cloud supports NetApp storage in the following configurations:
+
+* Cloud Volumes ONTAP (CVO) as guest connected storage
+* Cloud Volumes Service (CVS) as guest connected storage
+* Cloud Volumes Service (CVS) as a supplemental NFS datastore
+
+// tag::ehc-gcp[]
+View the detailed link:gcp/gcp-guest.html[guest connect storage options for GCVE].
+// end::ehc-gcp[]
+
+// tag::gcp[]
+View the detailed link:gcp-guest.html[guest connect storage options for GCVE].
+// end::gcp[]
+
+Read more about link:https://www.netapp.com/blog/cloud-volumes-service-google-cloud-vmware-engine/[NetApp Cloud Volumes Service datastore support for Google Cloud VMware Engine (NetApp blog)^] or link:https://cloud.google.com/blog/products/compute/how-to-use-netapp-cvs-as-datastores-with-vmware-engine[How to use NetApp CVS as datastores for Google Cloud VMware Engine (Google blog)^]
+
+
+// end::gcp-datastore[]
+--
+====
+
+// end::all[]

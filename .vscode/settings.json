@@ -1,9 +1,16 @@
 {
     "cSpell.words": [
+        "anthos",
+        "baremetal",
+        "hardbreaks",
         "imagesdir",
+        "Inferencing",
         "linkattrs",
-        "nondisruptive",
-        "ontap",
-        "transactionally"
-    ]
+        "multitenancy",
+        "NDAC",
+        "nofooter",
+        "ONTAP",
+        "Vectorstores"
+    ],
+    "asciidoc.antora.enableAntoraSupport": false
 }

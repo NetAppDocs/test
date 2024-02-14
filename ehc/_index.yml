@@ -1,0 +1,102 @@
+indexpage:
+#  lead: Enterprise Hybrid Cloud
+  tiles:
+    - title: "Getting Started"
+      links:
+        - title: "Overview"
+          url: /ehc-overview.html
+        - title: "NetApp Solutions for VMware in Hyperscaler Clouds"
+          url: /ehc-hyperscalers.html
+        - title: "Supported Storage Options"
+          url: /ehc-support-configs.html
+        - title: "Supported Solutions"
+          url: /ehc-solutions.html
+        - title: "Summary"
+          url: /ehc-summary.html
+        - title: "Region Support for NFS Datastores"
+          url: /ehc-regions.html
+        - title: "Videos and Demos"
+          url: ../videos.html#hmc
+#
+    - title: "NetApp on AWS (VMC)"
+      links:
+        - title: "NetApp Hybrid Multicloud with VMware for VMC"
+          url: /aws/index.html
+        - title: "Configure the Virtualization Environment"
+          url: /aws/aws-setup.html
+        - title: "FSx ONTAP as a Supplemental NFS Datastore: Overview"
+          url: /aws/aws-native-overview.html
+        - title: "FSx ONTAP as Guest Connected Storage"
+          url: /aws/aws-guest.html#fsx-ontap
+        - title: "CVO as Guest Connected Storage"
+          url: /aws/aws-guest.html#aws-cvo
+        - title: "Hybrid Multicloud Solutions for VMC"
+          url: /aws/aws-solutions.html
+        - title: "Region Support for NFS Datastores in AWS"
+          url: /aws/aws-regions.html
+
+#
+    - title: "NetApp on Azure (AVS)"
+      links:
+        - title: "NetApp Hybrid Multicloud with VMware for AVS"
+          url: /azure/index.html
+        - title: "Configure the Virtualization Environment"
+          url: /azure/azure-setup.html
+        - title: "ANF as a Supplemental NFS Datastore: Overview"
+          url: /azure/azure-native-overview.html
+        - title: "ANF as Guest Connected Storage"
+          url: /azure/azure-guest.html#anf
+        - title: "CVO as Guest Connected Storage"
+          url: /azure/azure-guest.html#azure-cvo
+        - title: "Hybrid Multicloud Solutions for AVS"
+          url: /azure/azure-solutions.html
+        - title: "Region Support for NFS Datastores in Azure"
+          url: /azure/azure-regions.html
+#
+    - title: "NetApp on Google Cloud Platform (GCVE)"
+      links:
+        - title: "NetApp Hybrid Multicloud with VMware for GCVE"
+          url: /gcp/index.html
+        - title: "Configure the Virtualization Environment"
+          url: /gcp/gcp-setup.html
+        - title: "NetApp CVS as a supplemental NFS Datastore: Overview"
+          url: /gcp/gcp-ncvs-datastore.html
+#        - title: "CVS as a Supplemental NFS Datastore"
+#          url:
+        - title: "CVO as Guest Connected Storage"
+          url: /gcp/gcp-guest.html#gcp-cvo
+        - title: "CVS as Guest Connected Storage"
+          url: /gcp/gcp-guest.html#cvs
+        
+        - title: "Hybrid Multicloud Solutions for GCVE"
+          url: /gcp/gcp-solutions.html
+        - title: "Region Support for NetApp CVS NFS Datastores in Google Cloud"
+          url: /gcp/gcp-regions.html
+        - title: "Security overview - NetApp CVS in Google Cloud"
+          url: /ncvs/ncvs-gc-overview.html
+#
+    - title: "Tools"
+      links:
+        - title: "FSx for ONTAP + VMC TCO Calculator"
+          url: https://cloud.netapp.com/vmc-aws-fsx-ontap/roi
+        - title: "FSx for ONTAP + VMC Simulator"
+          url: https://netapp-automation.github.io/FSx-VMC-Simulator
+        - title: "ANF + AVS TCO Calculator"
+          url: https://bluexp.netapp.com/anf-avs/tcoestimator
+        - title: "ANF + AVS Simulator"
+          url: https://netapp-automation.github.io/ANF-AVS-Simulator
+        - title: "GCVE + CVS TCO Estimator"
+          url: https://bluexp.netapp.com/gcve-cvs/roi
+        - title: "DRO for AWS with VMC Simulator"
+          url: https://netapp-automation.github.io/dro-simulator/?intro-1
+        - title: "DRO for ANF with AVS simulator"
+          url: https://netapp-automation.github.io/dro-simulator-avs-anf/?intro-1
+        - title: "BlueXP DRaaS Simulator"
+          url: https://netapp-automation.github.io/DRaaS_Simulator/?0.1
+        - title: "BlueXP - Backup and Recovery for VMs Simulator"
+          url: https://netapp-automation.github.io/Backup_and_Recovery_for_VMs_Simulator/?0.1
+#
+    - title: "BlueXP backup and recovery"
+      links:
+        - title: "3-2-1 Data Protection for VMware with SnapCenter Plug-in and BlueXP backup and recovery for VMs"
+          url: /bxp/bxp-scv-hybrid-solution.html

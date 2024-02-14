@@ -1,0 +1,30 @@
+// tag::steps[]
+
+. Requirements for the Ansible control node,:
+.. A RHEL/CentOS machine with the following packages installed:
+... Python3
+... Pip3
+... Ansible (version greater than 2.10.0)
+... Git
+
+If you have a fresh RHEL/CentOS machine without the above requirements installed, follow the below steps to setup that machine as the Ansible control node:
+
+. Enable the Ansible repository for RHEL-8/RHEL-7
+.. For RHEL-8 (run the below command as root)
+[source, cli]
+subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
+
+.. For RHEL-7 (run the below command as root)
+[source, cli]
+subscription-manager repos --enable rhel-7-server-ansible-2.9-rpms
+
+
+. Paste the below content in the Terminal
+[source, cli]
+sudo yum -y install python3 >> install.log
+sudo yum -y install python3-pip >> install.log
+python3 -W ignore -m pip --disable-pip-version-check install ansible >> install.log
+sudo yum -y install git >> install.log
+
+
+// end::steps[]

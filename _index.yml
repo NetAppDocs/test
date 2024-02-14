@@ -1,76 +1,63 @@
 indexpage:
-  lead: Cloud Volumes ONTAP enables you to optimize your cloud storage costs and performance while enhancing data protection, security, and compliance.
+  lead: NetApp Solutions are a set of strategic and technology capabilities that emphasize the NetApp portfolio of products and services to support our customers' most critical business needs.
   tiles:
-    - title: Get started
+    - title: "Introduction"
       links:
-        - title: Learn about Cloud Volumes ONTAP
-          url: concept-overview-cvo.html
-        - title: Quick start for AWS
-          url: task-getting-started-aws.html
-          flavor: aws
-        - title: Quick start for Azure
-          url: task-getting-started-azure.html
-          flavor: azure
-        - title: Quick start for Google Cloud
-          url: task-getting-started-gcp.html
-          flavor: gcp
-    - title: Licensing
+        - title: "About this Repository"
+          url: about.html
+        - title: "Change History"
+          url: change-log-display.html
+        - title: "Blogs"
+          url: blogs.html
+        - title: "Videos & Demos"
+          url: videos.html
+        - title: "Legal Notices"
+          url: legal-notices.html
+#
+    - title: "Solution Landing Pages"
       links:
-        - title: Licensing overview
-          url: concept-licensing.html
-        - title: Manage capacity-based licenses
-          url: task-manage-capacity-licenses.html
-        - title: Exchange unassigned node-based licenses
-          url: task-manage-node-licenses.html#exchange-unassigned-node-based-licenses
-        - title: Manage Keystone Subscriptions
-          url: task-manage-keystone.html
-    - title: Storage management
+        - title: "Artificial Intelligence"
+          url: ai/index.html
+        - title: "Containers"
+          url: containers/index.html
+        - title: "Enterprise Databases"
+          url: databases/index.html
+        - title: "Modern Data Analytics"
+          url: data-analytics/index.html
+        - title: "NetApp Hybrid Multicloud with VMware"
+          url: ehc/index.html
+        - title: "NetApp Hybrid Multicloud with Red Hat"
+          url: rhhc/index.html
+        - title: "VMware Sovereign Cloud"
+          url: vmw-sc/index.html
+        - title: "SAP and SAP HANA"
+          url: https://docs.netapp.com/us-en/netapp-solutions-sap/index.html
+        - title: "Virtualization"
+          url: virtualization/index.html
+#
+    - title: "Solution Automation"
       links:
-        - title: Create volumes
-          url: task-create-volumes.html
-        - title: Tier inactive data to object storage
-          url: task-tiering.html
-        - title: Accelerate data access with FlexCache
-          url: task-accelerate-data-access.html
-        - title: ONTAP SAN host configuration
-          url: https://docs.netapp.com/us-en/ontap-sanhost
-    - title: System administration
+        - title: "Introduction"
+          url: automation/automation_introduction.html
+        - title: "Getting Started"
+          url: automation/getting-started.html
+        - title: "Request Automation"
+          url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Automation]%0d%0a%0d%0aSolution%20Name:%20%0d%0aRequest%20Title:%20%0d%0aDescription:%0d%0aSuggestions:&title=Request%20Automation%20-%20%3Crequest_title%3E
+#
+    - title: "FlexPod - A NetApp & Cisco Solution"
       links:
-        - title: Upgrade Cloud Volumes ONTAP
-          url: task-updating-ontap-cloud.html
-        - title: Stop and start Cloud Volumes ONTAP
-          url: task-managing-state.html
-    - title: Security
+        - title: "FlexPod Solutions Technical Content"
+          url: https://docs.netapp.com/us-en/flexpod/
+        - title: "FlexPod Sales Page"
+          url: https://flexpod.com
+        - title: "Videos and Demos"
+          url: https://tv.netapp.com/search?q=flexpod
+        - title: "Blogs"
+          url: https://blog.netapp.com/tag/FlexPod/
+#
+    - title: "Feedback"
       links:
-        - title: Encrypt volumes with NetApp encryption
-          url: task-encrypting-volumes.html
-        - title: Improve ransomware protection
-          url: task-protecting-ransomware.html
-    - title: API
-      links:
-        - title: Overview of the Cloud Volumes ONTAP API
-          url: https://docs.netapp.com/us-en/bluexp-automation/cm/overview.html
-        - title: Prepare to use the API
-          url: https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html
-        - title: API reference
-          url: https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html
-    - title: Troubleshooting
-      links:
-        - title: NetApp Knowledge Base
-          url: https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)
-    - title: Reference
-      links:
-        - title: Supported configurations
-          url: https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html
-        - title: Supported cloud regions
-          url: https://cloud.netapp.com/cloud-volumes-global-regions
-        - title: Calculators
-          url: https://cloud.netapp.com/calculator-hub
-    - title: Blogs & community
-      links:
-        - title: NetApp Community
-          url: https://community.netapp.com/t5/Cloud-Volumes-ONTAP/bd-p/CloudVolumes
-        - title: BlueXP website blog
-          url: https://cloud.netapp.com/blog/topic/cloud-volumes-ontap
-        - title: Cloud webinars
-          url: https://cloud.netapp.com/events
+        - title: "Propose a New Solution"
+          url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Request%20Solution]%0d%0a%0d%0aSolution%20Use%20Case:%20%0d%0aSolution%20Description:%20%0d%0aAdditional%20Comments:&title=Request%20Solution%20-%20%3Csolution%3E
+        - title: "Provide Solution Feedback"
+          url: https://github.com/NetAppDocs/netapp-solutions/issues/new?body=[Solution%20Feedback]%0d%0a%0d%0aSolution%20Name:%20%0d%0aSolution%20Feedback:%20%0d%0aAdditional%20Comments:&title=Solution%20Feedback%20-%20%3Csolution%3E
