@@ -1,11 +1,11 @@
 ---
-layout: landing-page
+layout: astra
 sidebar: sidebar
 permalink: index.html
-summary: NetApp Solutions are a set of strategic and technology capabilities that emphasize the NetApp portfolio of products and services to support our customers' most critical business needs.
+summary: Cloud Volumes ONTAP enables you to optimize your cloud storage costs and performance while enhancing data protection, security, and compliance.
 ---
 
-= NetApp Solutions
+= Cloud Volumes ONTAP documentation
 :hardbreaks:
 :nofooter:
 :icons: font
