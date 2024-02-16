@@ -1,0 +1,24 @@
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Size |	The maximum size that you can enter largely depends on whether you enable thin provisioning, which enables you to create a volume that is bigger than the physical storage currently available to it.
+
+| Access control (for NFS only) |	An export policy defines the clients in the subnet that can access the volume. By default, BlueXP enters a value that provides access to all instances in the subnet.
+
+| Permissions and Users / Groups (for CIFS only) |	These fields enable you to control the level of access to a share for users and groups (also called access control lists or ACLs). You can specify local or domain Windows users or groups, or UNIX users or groups. If you specify a domain Windows user name, you must include the user's domain using the format domain\username.
+
+| Snapshot Policy | A Snapshot copy policy specifies the frequency and number of automatically created NetApp Snapshot copies. A NetApp Snapshot copy is a point-in-time file system image that has no performance impact and requires minimal storage. You can choose the default policy or none. You might choose none for transient data: for example, tempdb for Microsoft SQL Server.
+
+| Advanced options (for NFS only) | Select an NFS version for the volume: either NFSv3 or NFSv4.
+
+| Initiator group and IQN (for iSCSI only) |
+iSCSI storage targets are called LUNs (logical units) and are presented to hosts as standard block devices.
+
+Initiator groups are tables of iSCSI host node names and control which initiators have access to which LUNs.
+
+iSCSI targets connect to the network through standard Ethernet network adapters (NICs), TCP offload engine (TOE) cards with software initiators, converged network adapters (CNAs) or dedicated host bust adapters (HBAs) and are identified by iSCSI qualified names (IQNs).
+
+When you create an iSCSI volume, BlueXP automatically creates a LUN for you. We’ve made it simple by creating just one LUN per volume, so there’s no management involved. After you create the volume, link:task-connect-lun.html[use the IQN to connect to the LUN from your hosts].
+|===

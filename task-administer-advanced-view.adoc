@@ -1,0 +1,94 @@
+---
+sidebar: sidebar
+permalink: task-administer-advanced-view.html
+keywords: system manager, advanced view, access system manager, load system manager, use system manager, cloud tiering
+summary: If you need to perform advanced management of Cloud Volumes ONTAP, you can do so using ONTAP System Manager, which is a management interface that's provided with an ONTAP system. We have included the System Manager interface directly inside BlueXP so that you don't need to leave BlueXP for advanced management.
+---
+
+= Administer Cloud Volumes ONTAP using the Advanced View
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you need to perform advanced management of Cloud Volumes ONTAP, you can do so using ONTAP System Manager, which is a management interface that's provided with an ONTAP system. We have included the System Manager interface directly inside BlueXP so that you don't need to leave BlueXP for advanced management.
+
+This Advanced View is available as a Preview. We plan to refine this experience and add enhancements in upcoming releases. Please send us feedback by using the in-product chat.
+
+== Features
+
+The Advanced View in BlueXP gives you access to additional management features:
+
+* Advanced storage management
++
+Manage consistency groups, shares, qtrees, quotas, and Storage VMs.
+
+* Networking management
++
+Manage IPspaces, network interfaces, portsets, and ethernet ports.
+
+* Events and jobs
++
+View event logs, system alerts, jobs, and audit logs.
+
+* Advanced data protection
++
+Protect storage VMs, LUNs, and consistency groups.
+
+* Host management
++
+Set up SAN initiator groups and NFS clients.
+
+== Supported configurations
+
+Advanced management through System Manager is supported with Cloud Volumes ONTAP 9.10.0 and later in standard cloud regions.
+
+System Manager integration is not supported in GovCloud regions or in regions that have no outbound internet access.
+
+== Limitations
+
+A few features that appear in the System Manager interface are not supported with Cloud Volumes ONTAP:
+
+* BlueXP tiering
++
+The BlueXP tiering service is not supported with Cloud Volumes ONTAP. Tiering data to object storage must be set up directly from BlueXP's Standard View when creating volumes.
+
+* Tiers
++
+Aggregate management (including local tiers and cloud tiers) is not supported from System Manager. You must manage aggregates directly from BlueXP's Standard View.
+
+* Firmware upgrades
++
+Automatic firmware updates from the *Cluster > Settings* page is not supported with Cloud Volumes ONTAP.
+
+In addition, role-based access control from System Manager is not supported.
+
+== How to get started
+
+Open a Cloud Volumes ONTAP working environment and click the Advanced View option.
+
+.Steps
+
+. From the left navigation menu, select *Storage > Canvas*.
+
+. On the Canvas page, double-click the name of a Cloud Volumes ONTAP system.
+
+. In the top-right, click *Switch to Advanced View*.
++
+image:screenshot_advanced_view.png[A screenshot of a Cloud Volumes ONTAP working environment that shows the Switch to Advanced View option.]
+
+. If the confirmation message appears, read through it and click *Close*.
+
+. Use System Manager to manage Cloud Volumes ONTAP.
+
+. If needed, click *Switch to Standard View* to return to standard management through BlueXP.
+
+== Help with using System Manager
+
+If you need help using System Manager with Cloud Volumes ONTAP, you can refer to https://docs.netapp.com/us-en/ontap/index.html[ONTAP documentation^] for step-by-step instructions. Here are a few links that might help:
+
+* https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html[Volume and LUN management^]
+* https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html[Network management^]
+* https://docs.netapp.com/us-en/ontap/concept_dp_overview.html[Data protection^]

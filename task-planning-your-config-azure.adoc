@@ -1,0 +1,124 @@
+---
+sidebar: sidebar
+permalink: task-planning-your-config-azure.html
+keywords: license, disk, storage, size, write speed, volume usage, byol, capacity, limit, configurations, virtual machine, vm, regions, supported disks, disk types, premium storage, standard storage, use profile, thin provisioning, deduplication, compression, shared instance, dedicated instance, write speed, high write speed, normal write speed, network information, worksheet, limit, limits, storage limits, volume limit, aggregate limit, maximum volume size, maximum aggregate size, supported vm type, supported virtual machines, supported virtual machine types, supported instances, space, size, azure, disk size
+summary: When you deploy Cloud Volumes ONTAP in Azure, you can choose a preconfigured system that matches your workload requirements, or you can create your own configuration. If you choose your own configuration, you should understand the options available to you.
+---
+
+= Plan your Cloud Volumes ONTAP configuration in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When you deploy Cloud Volumes ONTAP in Azure, you can choose a preconfigured system that matches your workload requirements, or you can create your own configuration. If you choose your own configuration, you should understand the options available to you.
+
+== Choose a Cloud Volumes ONTAP license
+
+Several licensing options are available for Cloud Volumes ONTAP. Each option enables you to choose a consumption model that meets your needs.
+
+* link:concept-licensing.html[Learn about licensing options for Cloud Volumes ONTAP]
+* link:task-set-up-licensing-azure.html[Learn how to set up licensing]
+
+== Choose a supported region
+
+Cloud Volumes ONTAP is supported in most Microsoft Azure regions. https://cloud.netapp.com/cloud-volumes-global-regions[View the full list of supported regions^].
+
+== Choose a supported VM type
+
+Cloud Volumes ONTAP supports several VM types, depending on the license type that you choose.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html[Supported configurations for Cloud Volumes ONTAP in Azure^]
+
+== Understand storage limits
+
+The raw capacity limit for a Cloud Volumes ONTAP system is tied to the license. Additional limits impact the size of aggregates and volumes. You should be aware of these limits as you plan your configuration.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html[Storage limits for Cloud Volumes ONTAP in Azure^]
+
+== Size your system in Azure
+
+Sizing your Cloud Volumes ONTAP system can help you meet requirements for performance and capacity. You should be aware of a few key points when choosing a VM type, disk type, and disk size:
+
+Virtual machine type::
+Look at the supported virtual machine types in the http://docs.netapp.com/cloud-volumes-ontap/us-en/index.html[Cloud Volumes ONTAP Release Notes^] and then review details about each supported VM type. Be aware that each VM type supports a specific number of data disks.
+
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series[Azure documentation: General purpose virtual machine sizes^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15[Azure documentation: Memory optimized virtual machine sizes^]
+
+Azure disk type with single node systems:: 
+When you create volumes for Cloud Volumes ONTAP, you need to choose the underlying cloud storage that Cloud Volumes ONTAP uses as a disk.
++
+Single node systems can use three types of Azure Managed Disks:
+
+* _Premium SSD Managed Disks_ provide high performance for I/O-intensive workloads at a higher cost.
+
+* _Standard SSD Managed Disks_ provide consistent performance for workloads that require low IOPS.
+
+* _Standard HDD Managed Disks_ are a good choice if you don't need high IOPS and want to reduce your costs.
+
++
+For additional details about the use cases for these disks, see https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types[Microsoft Azure Documentation: What disk types are available in Azure?^].
+
+
+Azure disk type with HA pairs:: 
+HA systems use Premium SSD Shared Managed Disks which both provide high performance for I/O-intensive workloads at a higher cost. HA deployments created before the 9.12.1 release use Premium page blobs. 
+
+Azure disk size::
+When you launch Cloud Volumes ONTAP instances, you must choose the default disk size for aggregates. BlueXP uses this disk size for the initial aggregate, and for any additional aggregates that it creates when you use the simple provisioning option. You can create aggregates that use a disk size different from the default by link:task-create-aggregates.html[using the advanced allocation option].
++
+TIP: All disks in an aggregate must be the same size.
++
+When choosing a disk size, you should take several factors into consideration. The disk size impacts how much you pay for storage, the size of volumes that you can create in an aggregate, the total capacity available to Cloud Volumes ONTAP, and storage performance.
++
+The performance of Azure Premium Storage is tied to the disk size. Larger disks provide higher IOPS and throughput. For example, choosing 1 TiB disks can provide better performance than 500 GiB disks, at a higher cost.
++
+There are no performance differences between disk sizes for Standard Storage. You should choose disk size based on the capacity that you need.
++
+Refer to Azure for IOPS and throughput by disk size:
++
+* https://azure.microsoft.com/en-us/pricing/details/managed-disks/[Microsoft Azure: Managed Disks pricing^]
+* https://azure.microsoft.com/en-us/pricing/details/storage/page-blobs/[Microsoft Azure: Page Blobs pricing^]
+
+== View default system disks
+
+In addition to the storage for user data, BlueXP also purchases cloud storage for Cloud Volumes ONTAP system data (boot data, root data, core data, and NVRAM). For planning purposes, it might help for you to review these details before you deploy Cloud Volumes ONTAP.
+
+link:reference-default-configs.html#azure-single-node[View the default disks for Cloud Volumes ONTAP system data in Azure].
+
+TIP: The Connector also requires a system disk. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html[View details about the Connector's default configuration^].
+
+== Collect networking information
+
+When you deploy Cloud Volumes ONTAP in Azure, you need to specify details about your virtual network. You can use a worksheet to collect the information from your administrator.
+
+[cols=2*,options="header",cols="30,70"]
+|===
+
+| Azure information
+| Your value
+
+| Region |
+| Virtual network (VNet) |
+| Subnet |
+| Network security group (if using your own) |
+
+|===
+
+== Choose a write speed
+
+BlueXP enables you to choose a write speed setting for Cloud Volumes ONTAP. Before you choose a write speed, you should understand the differences between the normal and high settings and risks and recommendations when using high write speed. link:concept-write-speed.html[Learn more about write speed].
+
+== Choose a volume usage profile
+
+ONTAP includes several storage efficiency features that can reduce the total amount of storage that you need. When you create a volume in BlueXP, you can choose a profile that enables these features or a profile that disables them. You should learn more about these features to help you decide which profile to use.
+
+NetApp storage efficiency features provide the following benefits:
+
+Thin provisioning:: Presents more logical storage to hosts or users than you actually have in your physical storage pool. Instead of preallocating storage space, storage space is allocated dynamically to each volume as data is written.
+
+Deduplication:: Improves efficiency by locating identical blocks of data and replacing them with references to a single shared block. This technique reduces storage capacity requirements by eliminating redundant blocks of data that reside in the same volume.
+
+Compression:: Reduces the physical capacity required to store data by compressing data within a volume on primary, secondary, and archive storage.

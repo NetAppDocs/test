@@ -1,0 +1,67 @@
+---
+sidebar: sidebar
+permalink: task-google-key-manager.html
+keywords: google cloud, encryption, NVE, NetApp volume encryption, KMIP, GCP, GCP KMS, key manager service, encryption
+summary: Utilize Google's key management service for your third-party key management service.
+---
+
+= Manage keys with Google's Cloud Key Management Service
+:icons: font
+:hardbreaks:
+:imagesdir: ../media/
+
+[.lead]
+You can use link:https://cloud.google.com/kms/docs[Google Cloud Platform's Key Management Service (Cloud KMS)^] to protect your ONTAP encryption keys in a Google Cloud Platform-deployed application.
+
+Key management with Cloud KMS can be enabled with the CLI or the ONTAP REST API.
+
+When using Cloud KMS, be aware that by default a data SVM's LIF is used to communicate with the cloud key management endpoint. A node management network is used to communicate with the cloud provider's authentication services (oauth2.googleapis.com). If the cluster network is not configured correctly, the cluster will not properly utilize the key management service.
+
+.Before you begin
+* Cloud Volumes ONTAP must be running version 9.10.1 or later
+* Volume Encryption (VE) license installed
+* Multi-tenant Encryption Key Management (MTEKM) license installed, starting with Cloud Volumes ONTAP 9.12.1 GA.
+* You must be a cluster or SVM administrator
+* An active Google Cloud Platform subscription
+
+.Limitations
+* Cloud KMS can only be configured on a data SVM
+
+== Configuration
+
+.Google Cloud
+. In your Google Cloud environment, link:https://cloud.google.com/kms/docs/creating-keys[create a symmetric GCP key ring and key^].
+. Create a custom role for your Cloud Volumes ONTAP service account.
++
+----
+gcloud iam roles create kmsCustomRole
+    --project=<project_id>
+    --title=<kms_custom_role_name>
+    --description=<custom_role_description>
+    --permissions=cloudkms.cryptoKeyVersions.get,cloudkms.cryptoKeyVersions.list,cloudkms.cryptoKeyVersions.useToDecrypt,cloudkms.cryptoKeyVersions.useToEncrypt,cloudkms.cryptoKeys.get,cloudkms.keyRings.get,cloudkms.locations.get,cloudkms.locations.list,resourcemanager.projects.get
+    --stage=GA
+----
++
+. Assign the custom role to the Cloud KMS key and Cloud Volumes ONTAP service account:
+`gcloud kms keys add-iam-policy-binding _key_name_ --keyring _key_ring_name_ --location _key_location_ --member serviceAccount:_service_account_Name_ --role projects/_customer_project_id_/roles/kmsCustomRole`
+. Download service account JSON key:
+`gcloud iam service-accounts keys create key-file --iam-account=_sa-name_@_project-id_.iam.gserviceaccount.com`
+
+.Cloud Volumes ONTAP
+. Connect to the cluster management LIF with your preferred SSH client.
+. Switch to the advanced privilege level:
+`set -privilege advanced`
+. Create a DNS for the data SVM.
+`dns create -domains c._<project>_.internal -name-servers _server_address_ -vserver _SVM_name_`
+. Create CMEK entry:
+`security key-manager external gcp enable -vserver _SVM_name_ -project-id _project_ -key-ring-name _key_ring_name_ -key-ring-location _key_ring_location_ -key-name _key_name_`
+. When prompted, enter the service account JSON key from your GCP account.
+. Confirm the enabled process succeeded:
+`security key-manager external gcp check -vserver _svm_name_`
+. OPTIONAL: Create a volume to test encryption `vol create _volume_name_ -aggregate _aggregate_ -vserver _vserver_name_ -size 10G`
+
+== Troubleshoot
+If you need to troubleshoot, you can tail the raw REST API logs in the final two steps above:
+
+. `set d`
+. `systemshell -node _node_ -command tail -f /mroot/etc/log/mlog/kmip2_client.log`

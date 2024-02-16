@@ -1,0 +1,75 @@
+---
+sidebar: sidebar
+permalink: task-manage-aggregates.html
+keywords: aggregates, delete aggregates, add disks, view aggregates
+summary: Manage aggregates yourself by adding disks, viewing information about the aggregates, and by deleting them.
+---
+
+= Manage aggregates
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Manage aggregates yourself by adding disks, viewing information about the aggregates, and by deleting them.
+
+CAUTION: All disks and aggregates must be created and deleted directly from BlueXP. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+.Before you begin
+
+If you want to delete an aggregate, you must have first deleted the volumes in the aggregate.
+
+.About this task
+
+If an aggregate is running out of space, you can move volumes to another aggregate by using System Manager.
+
+.Steps
+
+. From the left navigation menu, select *Storage > Canvas*.
+
+. On the Canvas page, double-click the Cloud Volumes ONTAP working environment on which you want to manage aggregates.
+
+. In the working environment, click the *Aggregates* tab.
+
+. On the Aggregates tab, navigate to the desired title and then click the *... (ellipse icon)*.
++
+image:screenshot_aggr_menu_options.png[A screenshot of the Aggregates menu options.]
+
+. Manage your aggregates:
++
+[cols=2*,options="header",cols="30,70"]
+|===
+
+| Task
+| Action
+
+| View information about an aggregate | Under the ... (ellipse icon) menu, click *View aggregate details*.
+
+| Create a volume on a specific aggregate |	Under the ... (ellipse icon) menu, click *Add volume*.
+
+| Add disks to an aggregate
+a|
+.. Under the ... (ellipse icon) menu, click *Add disks*.
+.. Select the number of disks that you want to add and click *Add*.
++
+TIP: All disks in an aggregate must be the same size.
+
+ifdef::aws[]
+| Increase the capacity of an aggregate that supports Amazon EBS Elastic Volumes
+a|
+.. Under the ... (ellipse icon) menu, click *Increase capacity*.
+.. Enter the additional capacity that you'd like to add and then click *Increase*.
++
+Note that you must increase the capacity of the aggregate by a minimum of 256 GiB or 10% of the aggregate's size.
++
+For example, if you have a 1.77 TiB aggregate, 10% is 181 GiB. That’s lower than 256 GiB, so the size of the aggregate must in increased by the 256 GiB minimum.
+endif::aws[]
+
+| Delete an aggregate
+a|
+.. Select an aggregate tile that does not contain any volumes click the *... (ellipse icon) > Delete*.
+.. Click *Delete* again to confirm.
+
+|===

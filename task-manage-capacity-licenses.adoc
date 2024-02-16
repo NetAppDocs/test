@@ -1,0 +1,217 @@
+---
+sidebar: sidebar
+permalink: task-manage-capacity-licenses.html
+keywords: license, licensing, capacity license, capacity based license, add license, install license, digital wallet
+summary: Manage your capacity-based licenses from the BlueXP digital wallet to ensure that your NetApp account has enough capacity for your Cloud Volumes ONTAP systems.
+---
+
+= Manage capacity-based licenses
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Manage your capacity-based licenses from the BlueXP digital wallet to ensure that your NetApp account has enough capacity for your Cloud Volumes ONTAP systems.
+
+//The contents of this page are reused in the bluexp-digital-wallet doc site. As a result, any links from this page to other pages must use absolute URLs so that the links resolve from the bluexp-digital wallet doc site.
+
+_Capacity-based licenses_ enable you to pay for Cloud Volumes ONTAP per TiB of capacity.
+
+The _BlueXP digital wallet_ enables you to manage licenses for Cloud Volumes ONTAP from a single location. You can add new licenses and update existing licenses.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[Learn more about Cloud Volumes ONTAP licenses].
+
+== How licenses are added to the BlueXP digital wallet
+
+After you purchase a license from your NetApp sales representative, NetApp will send you an email with the serial number and additional licensing details.
+
+In the meantime, BlueXP automatically queries NetApp's licensing service to obtain details about the licenses associated with your NetApp Support Site account. If there are no errors, BlueXP automatically adds the licenses to the digital wallet.
+
+If BlueXP can't add the license, you'll need to manually add them to the digital wallet yourself. For example, if the Connector is installed in a location that doesn't have internet access, you'll need to add the licenses yourself. <<Add purchased licenses to your account,Learn how to add purchased licenses to your account>>.
+
+== View the consumed capacity in your account
+
+The BlueXP digital wallet shows you the total consumed capacity in your account and the consumed capacity by licensing package. This can help you understand how you're being charged and whether you need to purchase additional capacity.
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, keep *Capacity Based Licenses* selected.
+
+. View the packages summary, which shows you consumed capacity, total precommitted capacity, and total PAYGO capacity.
++
+* _Total consumed capacity_ is the total provisioned capacity of all Cloud Volumes ONTAP systems in your NetApp account. The charging is based on each volume's provisioned size, regardless of local, used, stored, or effective space within the volume.
++
+* _Total precommitted capacity_ is the total licensed capacity (BYOL or Marketplace Contract) that you purchased from NetApp.
++
+* _Total PAYGO_ is the total provisioned capacity using cloud marketplace subscriptions. Charging via PAYGO is used only if the consumed capacity is higher than the licensed capacity or if there is no BYOL license available in the BlueXP digital wallet.
++
+Here's an example of a Cloud Volumes ONTAP packages summary in BlueXP digital wallet:
++
+image:screenshot_capacity-based-licenses.png[A screenshot that shows a Cloud Volumes ONTAP packages summary including total consumed capacity, total precommitted capacity (BYOL and Marketplace Contracts), and total PAYGO, or provisioned, capacity in BlueXP digital wallet.]
+
+. Under the summary, view the consumed capacity for each of your licensing packages.
++
+* _Consumed capacity_ shows you the capacity of the volumes for that package. For more details about a specific package, hover your mouse over the tooltip.
++
+To better understand the capacities that display for the Essentials package, you should be familiar with how charging works. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#notes-about-charging[Learn about charging for the Essentials package].
++
+* _Precommitted capacity_ is the licensed capacity (BYOL or Marketplace Contract) that you purchased from NetApp.
+** _BYOL_ shows you the licensed capacity that you purchased from NetApp for this package type.
+** _Marketplace Contracts_ shows the licensed capacity that you purchased with a marketplace contract for this package type.
++
+* _PAYGO_ shows you the consumed capacity by license consumption model.
++
+Here's an example for an account that has several licensing packages:
++
+image:screenshot-digital-wallet-packages.png[A screenshot that shows consumed capacity, precommitted capacity, and PAYGO, or provisioned, capacity for the essentials and professional packages.]
+
+== Download usage reports
+
+Account administrators can download four usage reports from the digital wallet in BlueXP. These usage reports provide capacity details of your subscriptions and tell you how you're being charged for the resources in your Cloud Volumes ONTAP subscriptions. The downloadable reports capture data at a point in time and can be easily shared with others. 
+
+image:screenshot-digital-wallet-usage-report.png[Screenshot shows the digital wallet Cloud Volumes ONTAP capacity based licenses page and highlights the usage report button.]
+
+The following reports are available for download. Capacity values shown are in TiB. 
+
+* *High-level usage*: This report shows you exactly what's in the “Cloud Volumes ONTAP Packages Summary” card in the digital wallet. It includes the following information: 
++
+** Total consumed capacity 
+** Total precommitted capacity 
+** Total BYOL capacity 
+** Total Marketplace contracts capacity
+** Total PAYGO capacity
+
+* *Cloud Volumes ONTAP package usage*: This report shows you exactly what's on the package cards in the digital wallet. It includes the following information for each package except the Optimized I/O package: 
++
+** Total consumed capacity
+** Total precommitted capacity 
+** Total BYOL capacity 
+** Total Marketplace contracts capacity 
+** Total PAYGO capacity
+
+* *Storage VMs usage*: This report shows how charged capacity is broken down across Cloud Volumes ONTAP systems and storage virtual machines (SVMs). This information is not available on any screen in the digital wallet. It includes the following information: 
++
+** Working environment ID and name (appears as the UUID)
+** Cloud
+** NetApp account ID
+** Working environment configuration
+** SVM name
+** Provisioned capacity
+** Charged capacity roundup
+** Marketplace billing term
+** Cloud Volumes ONTAP package or feature
+** Charging SaaS Marketplace subscription name
+** Charging SaaS Marketplace subscription ID
+** Workload type
+
+* *Volumes usage*: This report shows how charged capacity is broken down by volumes in a working environment. This information is not available on any screen in the digital wallet. It includes the following information: 
++
+** Working environment ID and name (appears as the UUID)
+** SVN name
+** Volume ID 
+** Volume type
+** Volume provisioned capacity
++
+NOTE: FlexClone volumes aren't included in this report because these types of volumes don't incur charges. 
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, keep *Capacity Based Licenses* selected and click *Usage report*.
++
+The usage report downloads. 
+
+. Open the downloaded file to access the reports. 
+
+== Add purchased licenses to your account
+
+If you don't see your purchased licenses in the BlueXP digital wallet, you'll need to add the licenses to BlueXP so that the capacity is available for Cloud Volumes ONTAP.
+
+.What you'll need
+
+* You need to provide BlueXP the serial number of the license or the license file.
+
+* If you want to enter the serial number, you first need to https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html[add your NetApp Support Site account to BlueXP^]. This is the NetApp Support Site account that's authorized to access the serial number.
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, keep *Capacity Based Licenses* selected and click *Add License*.
+
+. Enter the serial number for your capacity-based license or upload the license file.
++
+If you entered a serial number, you also need to select the NetApp Support Site account that's authorized to access the serial number.
+
+. Click *Add License*.
+
+== Update a capacity-based license
+
+If you purchased additional capacity or extended the term of your license, BlueXP automatically updates the license in the digital wallet. There's nothing that you need to do.
+
+However, if you deployed BlueXP in a location that doesn't have internet access, then you'll need to manually update the license in BlueXP.
+
+.What you'll need
+
+The license file (or _files_ if you have an HA pair).
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, click the action menu next to the license and select *Update License*.
+
+. Upload the license file.
+
+. Click *Upload License*.
+
+== Change charging methods
+
+You can change the charging method for a Cloud Volumes ONTAP system that uses capacity-based licensing. For example, if you deployed a Cloud Volumes ONTAP system with the Essentials package, you can change it to the Professional package if your business needs changed.
+
+ifdef::azure[]
+.Limitation
+
+Changing to or from the Edge Cache license isn't supported.
+endif::azure[]
+
+.Important note
+
+If you have a private offer or contract from your cloud provider's marketplace, changing to a charging method that's not included in your contract will result in charging against BYOL (if you purchased a license from NetApp) or PAYGO.
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, click *Change Charging Method*.
++
+image:screenshot-digital-wallet-charging-method-button.png[A screenshot of the Cloud Volumes ONTAP page in the BlueXP digital wallet where the Change Charging Method button is just above the table.]
+
+. Select a working environment, choose the new charging method, and then confirm your understanding that changing the package type will affect service charges.
++
+image:screenshot-digital-wallet-charging-method.png[A screenshot of the Change Charging Method dialog box where you choose a new charging method for a Cloud Volumes ONTAP working environment.]
+
+. Click *Change Charging Method*.
+
+.Result
+
+BlueXP changes the charging method for the Cloud Volumes ONTAP system.
+
+You might also notice that the BlueXP digital wallet refreshes the consumed capacity for each package type to account for the change that you just made.
+
+== Remove a capacity-based license
+
+If a capacity-based license expired and is no longer in use, then you can remove it at any time.
+
+.Steps
+
+. From the BlueXP navigation menu, select *Governance > Digital wallet*.
+
+. On the *Cloud Volumes ONTAP* tab, click the action menu next to the license and select *Remove License*.
+
+. Click *Remove* to confirm.

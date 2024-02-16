@@ -1,0 +1,434 @@
+---
+sidebar: sidebar
+permalink: task-deploying-otc-azure.html
+keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create, azure, BYOL, license key, serial number, tags, azure tags, location, license, preconfigured packages, programmatic deployments, disk size, write speed, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, HA pair, associate subscription, azure marketplace, marketplace subscription, cloud data sense, cloud backup
+summary: You can launch a single Cloud Volumes ONTAP system in Azure by creating a Cloud Volumes ONTAP working environment in BlueXP.
+---
+
+= Launching Cloud Volumes ONTAP in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can launch a single node system or an HA pair in Azure by creating a Cloud Volumes ONTAP working environment in BlueXP.
+
+.What you'll need
+
+You need the following to create a working environment.
+
+[[licensing]]
+* A Connector that's up and running.
+
+** You should have a https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[Connector that is associated with your workspace^].
+
+** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[You should be prepared to leave the Connector running at all times^].
+
+* An understanding of the configuration that you want to use.
++
+You should have chose a configuration and obtained Azure networking information from your administrator. For details, see link:task-planning-your-config-azure.html[Planning your Cloud Volumes ONTAP configuration^].
+
+* An understanding of what's required to set up licensing for Cloud Volumes ONTAP.
++
+link:task-set-up-licensing-azure.html[Learn how to set up licensing^].
+
+.About this task
+
+When BlueXP creates a Cloud Volumes ONTAP system in Azure, it creates several Azure objects, such as a resource group, network interfaces, and storage accounts. You can review a summary of the resources at the end of the wizard.
+
+[WARNING]
+.Potential for Data Loss
+====
+The best practice is to use a new, dedicated resource group for each Cloud Volumes ONTAP system.
+
+Deploying Cloud Volumes ONTAP in an existing, shared resource group is not recommended due to the risk of data loss. While BlueXP can remove Cloud Volumes ONTAP resources from a shared resource group in case of deployment failure or deletion, an Azure user might accidentally delete Cloud Volumes ONTAP resources from a shared resource group.
+====
+
+== Launching a single-node Cloud Volumes ONTAP system in Azure
+
+If you want to launch a single-node Cloud Volumes ONTAP system in Azure, you need to create an single node working environment in BlueXP.
+
+.Steps
+
+. From the left navigation menu, select *Storage > Canvas*.
+
+. [[subscribe]]On the Canvas page, click *Add Working Environment* and follow the prompts.
+
+. *Choose a Location*: Select *Microsoft Azure* and *Cloud Volumes ONTAP Single Node*.
+
+. If you're prompted, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[create a Connector^].
+
+. *Details and Credentials*: Optionally change the Azure credentials and subscription, specify a cluster name, add tags if needed, and then specify credentials.
++
+The following table describes fields for which you might need guidance:
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Working Environment Name | BlueXP uses the working environment name to name both the Cloud Volumes ONTAP system and the Azure virtual machine. It also uses the name as the prefix for the predefined security group, if you select that option.
+
+| Resource Group Tags | Tags are metadata for your Azure resources. When you enter tags in this field, BlueXP adds them to the resource group associated with the Cloud Volumes ONTAP system.
+
+You can add up to four tags from the user interface when creating a working environment, and then you can add more after its created. Note that the API does not limit you to four tags when creating a working environment.
+
+For information about tags, refer to https://azure.microsoft.com/documentation/articles/resource-group-using-tags/[Microsoft Azure Documentation: Using tags to organize your Azure resources^].
+
+| User name and password | These are the credentials for the Cloud Volumes ONTAP cluster administrator account. You can use these credentials to connect to Cloud Volumes ONTAP through System Manager or its CLI. Keep the default _admin_ user name or change it to a custom user name.
+
+| [[video]]Edit Credentials | You can choose different Azure credentials and a different Azure subscription to use with this Cloud Volumes ONTAP system. You need to associate an Azure Marketplace subscription with the selected Azure subscription in order to deploy a pay-as-you-go Cloud Volumes ONTAP system. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html[Learn how to add credentials^].
+
+|===
++
+The following video shows how to associate a Marketplace subscription to an Azure subscription:
++
+video::video_subscribing_azure.mp4[width=848, height=480]
+
+. *Services*: Keep the services enabled or disable the individual services that you don't want to use with Cloud Volumes ONTAP.
++
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[Learn more about BlueXP classification^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html[Learn more about BlueXP backup and recovery^]
++
+TIP: If you would like to utilize WORM and data tiering, you must disable BlueXP backup and recovery and deploy a Cloud Volumes ONTAP working environment with version 9.8 or above. 
+
+. *Location*: Select a region, availability zone, VNet, and subnet, and then select the checkbox to confirm network connectivity between the Connector and the target location.
++
+For single node systems, you can choose the Availability Zone in which you'd like to deploy Cloud Volumes ONTAP. If you don't select an AZ, BlueXP will select one for you.
+
+. *Connectivity*: Choose a new or existing resource group and then choose whether to use the predefined security group or to use your own.
++
+The following table describes fields for which you might need guidance:
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Resource Group
+
+a| Create a new resource group for Cloud Volumes ONTAP or use an existing resource group. The best practice is to use a new, dedicated resource group for Cloud Volumes ONTAP. While it is possible to deploy Cloud Volumes ONTAP in an existing, shared resource group, it's not recommended due to the risk of data loss. See the warning above for more details.
+
+TIP: If the Azure account that you're using has the https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[required permissions^], BlueXP removes Cloud Volumes ONTAP resources from a resource group, in case of deployment failure or deletion.
+
+| Generated security group a| If you let BlueXP generate the security group for you, you need to choose how you'll allow traffic:
+
+* If you choose *Selected VNet only*, the source for inbound traffic is the subnet range of the selected VNet and the subnet range of the VNet where the Connector resides. This is the recommended option.
+* If you choose *All VNets*, the source for inbound traffic is the 0.0.0.0/0 IP range.
+
+| Use existing | If you choose an existing security group, then it must meet Cloud Volumes ONTAP requirements. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules[View the default security group^].
+
+|===
+
+. *Charging Methods and NSS Account*: Specify which charging option would you like to use with this system, and then specify a NetApp Support Site account.
++
+* link:concept-licensing.html[Learn about licensing options for Cloud Volumes ONTAP^].
+* link:task-set-up-licensing-azure.html[Learn how to set up licensing^].
+
+. *Preconfigured Packages*: Select one of the packages to quickly deploy a Cloud Volumes ONTAP system, or click *Create my own configuration*.
++
+If you choose one of the packages, you only need to specify a volume and then review and approve the configuration.
+
+. *Licensing*: Change the Cloud Volumes ONTAP version as needed and select a virtual machine type.
++
+NOTE: If a newer Release Candidate, General Availability, or patch release is available for the selected version, then BlueXP updates the system to that version when creating the working environment. For example, the update occurs if you select Cloud Volumes ONTAP 9.10.1 and 9.10.1 P4 is available. The update does not occur from one release to another—for example, from 9.6 to 9.7.
+
+. *Subscribe from the Azure Marketplace*: Follow the steps if BlueXP could not enable programmatic deployments of Cloud Volumes ONTAP.
+
+. *Underlying Storage Resources*: Choose settings for the initial aggregate: a disk type, a size for each disk, and whether data tiering to Blob storage should be enabled.
++
+Note the following:
++
+* The disk type is for the initial volume. You can choose a different disk type for subsequent volumes.
+* The disk size is for all disks in the initial aggregate and for any additional aggregates that BlueXP creates when you use the simple provisioning option. You can create aggregates that use a different disk size by using the advanced allocation option.
++
+For help choosing a disk type and size, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure[Sizing your system in Azure^].
+* You can choose a specific volume tiering policy when you create or edit a volume.
+* If you disable data tiering, you can enable it on subsequent aggregates.
++
+link:concept-data-tiering.html[Learn more about data tiering^].
+
+. *Write Speed & WORM*:  
+.. Choose *Normal* or *High* write speed, if desired.
++
+link:concept-write-speed.html[Learn more about write speed^].
+.. Activate write once, read many (WORM) storage, if desired.
++
+This option is only available for certain VM types. To find out which VM types are supported, see link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs[Supported configurations by license for HA pairs^]. 
++
+WORM can't be enabled if data tiering was enabled for Cloud Volumes ONTAP versions 9.7 and below. Reverting or downgrading to Cloud Volumes ONTAP 9.8 is blocked after enabling WORM and tiering. 
++
+link:concept-worm.html[Learn more about WORM storage^].
+.. If you activate WORM storage, select the retention period. 
+
+. *Create Volume*: Enter details for the new volume or click *Skip*.
++
+link:concept-client-protocols.html[Learn about supported client protocols and versions^].
++
+Some of the fields in this page are self-explanatory. The following table describes fields for which you might need guidance:
++
+include::_include/create_volume.adoc[]
++
+The following image shows the Volume page filled out for the CIFS protocol:
++
+image:screenshot_cot_vol.gif[Screen shot: Shows the Volume page filled out for a Cloud Volumes ONTAP instance.]
+
+. *CIFS Setup*: If you chose the CIFS protocol, set up a CIFS server.
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| DNS Primary and Secondary IP Address | The IP addresses of the DNS servers that provide name resolution for the CIFS server.
+The listed DNS servers must contain the service location records (SRV) needed to locate the Active Directory LDAP servers and domain controllers for the domain that the CIFS server will join.
+
+| Active Directory Domain to join | The FQDN of the Active Directory (AD) domain that you want the CIFS server to join.
+
+| Credentials authorized to join the domain | The name and password of a Windows account with sufficient privileges to add computers to the specified Organizational Unit (OU) within the AD domain.
+
+| CIFS server NetBIOS name | A CIFS server name that is unique in the AD domain.
+
+| Organizational Unit | The organizational unit within the AD domain to associate with the CIFS server. The default is CN=Computers.
+
+To configure Azure AD Domain Services as the AD server for Cloud Volumes ONTAP, you should enter *OU=AADDC Computers* or *OU=AADDC Users* in this field.
+https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-ou[Azure Documentation: Create an Organizational Unit (OU) in an Azure AD Domain Services managed domain^]
+
+| DNS Domain | The DNS domain for the Cloud Volumes ONTAP storage virtual machine (SVM). In most cases, the domain is the same as the AD domain.
+
+| NTP Server | Select *Use Active Directory Domain* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/bluexp-automation/index.html[BlueXP automation docs^] for details.
+
+Note that you can configure an NTP server only when creating a CIFS server. It's not configurable after you create the CIFS server.
+|===
+
+. *Usage Profile, Disk Type, and Tiering Policy*: Choose whether you want to enable storage efficiency features and change the volume tiering policy, if needed.
++
+For more information, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#choose-a-volume-usage-profile[Understanding volume usage profiles^] and link:concept-data-tiering.html[Data tiering overview^].
+
+. *Review & Approve*: Review and confirm your selections.
+
+.. Review details about the configuration.
+
+.. Click *More information* to review details about support and the Azure resources that BlueXP will purchase.
+
+.. Select the *I understand...* check boxes.
+
+.. Click *Go*.
+
+.Result
+
+BlueXP deploys the Cloud Volumes ONTAP system. You can track the progress in the timeline.
+
+If you experience any issues deploying the Cloud Volumes ONTAP system, review the failure message. You can also select the working environment and click *Re-create environment*.
+
+For additional help, go to https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab[NetApp Cloud Volumes ONTAP Support^].
+
+.After you finish
+
+* If you provisioned a CIFS share, give users or groups permissions to the files and folders and verify that those users can access the share and create a file.
+
+* If you want to apply quotas to volumes, use System Manager or the CLI.
++
+Quotas enable you to restrict or track the disk space and number of files used by a user, group, or qtree.
+
+== Launching a Cloud Volumes ONTAP HA pair in Azure
+
+If you want to launch a Cloud Volumes ONTAP HA pair in Azure, you need to create an HA working environment in BlueXP.
+
+.Steps
+
+. From the left navigation menu, select *Storage > Canvas*.
+
+. [[subscribe]]On the Canvas page, click *Add Working Environment* and follow the prompts.
+
+. If you're prompted, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[create a Connector^].
+
+. *Details and Credentials*: Optionally change the Azure credentials and subscription, specify a cluster name, add tags if needed, and then specify credentials.
++
+The following table describes fields for which you might need guidance:
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Working Environment Name | BlueXP uses the working environment name to name both the Cloud Volumes ONTAP system and the Azure virtual machine. It also uses the name as the prefix for the predefined security group, if you select that option.
+
+| Resource Group Tags | Tags are metadata for your Azure resources. When you enter tags in this field, BlueXP adds them to the resource group associated with the Cloud Volumes ONTAP system.
+
+You can add up to four tags from the user interface when creating a working environment, and then you can add more after its created. Note that the API does not limit you to four tags when creating a working environment.
+
+For information about tags, refer to https://azure.microsoft.com/documentation/articles/resource-group-using-tags/[Microsoft Azure Documentation: Using tags to organize your Azure resources^].
+
+| User name and password | These are the credentials for the Cloud Volumes ONTAP cluster administrator account. You can use these credentials to connect to Cloud Volumes ONTAP through System Manager or its CLI. Keep the default _admin_ user name or change it to a custom user name.
+
+| [[video]]Edit Credentials | You can choose different Azure credentials and a different Azure subscription to use with this Cloud Volumes ONTAP system. You need to associate an Azure Marketplace subscription with the selected Azure subscription in order to deploy a pay-as-you-go Cloud Volumes ONTAP system. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html[Learn how to add credentials^].
+
+|===
++
+The following video shows how to associate a Marketplace subscription to an Azure subscription:
++
+video::video_subscribing_azure.mp4[width=848, height=480]
+
+. *Services*: Keep the services enabled or disable the individual services that you don't want to use with Cloud Volumes ONTAP.
++
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[Learn more about BlueXP classification^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html[Learn more about BlueXP backup and recovery^]
++
+TIP: If you would like to utilize WORM and data tiering, you must disable BlueXP backup and recovery and deploy a Cloud Volumes ONTAP working environment with version 9.8 or above. 
+
+. *HA Deployment Models*: 
+
+.. Select *Single Availability Zone* or *Multiple Availability Zone*. 
+.. *Location and Connectivity* (single AZ) and *Region and Connectivity* (multiple AZs)
+* For single AZ, select a region, VNet, and subnet.
+* For multiple AZs, select a region, VNet, subnet, zone for node 1, and zone for node 2. 
+.. Select the *I have verified network connectivity...* check box.
+
+. *Connectivity*: Choose a new or existing resource group and then choose whether to use the predefined security group or to use your own.
++
+The following table describes fields for which you might need guidance:
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Resource Group
+
+a| Create a new resource group for Cloud Volumes ONTAP or use an existing resource group. The best practice is to use a new, dedicated resource group for Cloud Volumes ONTAP. While it is possible to deploy Cloud Volumes ONTAP in an existing, shared resource group, it's not recommended due to the risk of data loss. See the warning above for more details.
+
+You must use a dedicated resource group for each Cloud Volumes ONTAP HA pair that you deploy in Azure. Only one HA pair is supported in a resource group. BlueXP experiences connection issues if you try to deploy a second Cloud Volumes ONTAP HA pair in an Azure resource group.
+
+TIP: If the Azure account that you're using has the https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[required permissions^], BlueXP removes Cloud Volumes ONTAP resources from a resource group, in case of deployment failure or deletion.
+
+| Generated security group a| If you let BlueXP generate the security group for you, you need to choose how you'll allow traffic:
+
+* If you choose *Selected VNet only*, the source for inbound traffic is the subnet range of the selected VNet and the subnet range of the VNet where the Connector resides. This is the recommended option.
+* If you choose *All VNets*, the source for inbound traffic is the 0.0.0.0/0 IP range.
+
+| Use existing | If you choose an existing security group, then it must meet Cloud Volumes ONTAP requirements. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules[View the default security group^].
+
+|===
+
+. *Charging Methods and NSS Account*: Specify which charging option would you like to use with this system, and then specify a NetApp Support Site account.
++
+* link:concept-licensing.html[Learn about licensing options for Cloud Volumes ONTAP^].
+* link:task-set-up-licensing-azure.html[Learn how to set up licensing^].
+
+. *Preconfigured Packages*: Select one of the packages to quickly deploy a Cloud Volumes ONTAP system, or click *Change configuration*.
++
+If you choose one of the packages, you only need to specify a volume and then review and approve the configuration.
+
+. *Licensing*: Change the Cloud Volumes ONTAP version as needed and select a virtual machine type.
++
+NOTE: If a newer Release Candidate, General Availability, or patch release is available for the selected version, then BlueXP updates the system to that version when creating the working environment. For example, the update occurs if you select Cloud Volumes ONTAP 9.10.1 and 9.10.1 P4 is available. The update does not occur from one release to another—for example, from 9.6 to 9.7.
+
+. *Subscribe from the Azure Marketplace*: Follow the steps if BlueXP could not enable programmatic deployments of Cloud Volumes ONTAP.
+
+. *Underlying Storage Resources*: Choose settings for the initial aggregate: a disk type, a size for each disk, and whether data tiering to Blob storage should be enabled.
++
+Note the following:
++
+* The disk size is for all disks in the initial aggregate and for any additional aggregates that BlueXP creates when you use the simple provisioning option. You can create aggregates that use a different disk size by using the advanced allocation option.
++
+For help choosing a disk size, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure[Size your system in Azure^].
+* You can choose a specific volume tiering policy when you create or edit a volume.
+* If you disable data tiering, you can enable it on subsequent aggregates.
++
+link:concept-data-tiering.html[Learn more about data tiering^].
+
+. *Write Speed & WORM*: 
+.. Choose *Normal* or *High* write speed, if desired.
++
+link:concept-write-speed.html[Learn more about write speed^].
+.. Activate write once, read many (WORM) storage, if desired.
++
+This option is only available for certain VM types. To find out which VM types are supported, see link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs[Supported configurations by license for HA pairs^]. 
++
+WORM can't be enabled if data tiering was enabled for Cloud Volumes ONTAP versions 9.7 and below. Reverting or downgrading to Cloud Volumes ONTAP 9.8 is blocked after enabling WORM and tiering. 
++
+link:concept-worm.html[Learn more about WORM storage^].
+.. If you activate WORM storage, select the retention period. 
+
+. *Secure Communication to Storage & WORM*: Choose whether to enable an HTTPS connection to Azure storage accounts, and activate write once, read many (WORM) storage, if desired.
++
+The HTTPS connection is from a Cloud Volumes ONTAP 9.7 HA pair to Azure page blob storage accounts. Note that enabling this option can impact write performance. You can't change the setting after you create the working environment.
++
+link:concept-worm.html[Learn more about WORM storage^].
++
+WORM can't be enabled if data tiering was enabled.
++
+link:concept-worm.html[Learn more about WORM storage^].
+
+. *Create Volume*: Enter details for the new volume or click *Skip*.
++
+link:concept-client-protocols.html[Learn about supported client protocols and versions^].
++
+Some of the fields in this page are self-explanatory. The following table describes fields for which you might need guidance:
++
+include::_include/create_volume.adoc[]
++
+The following image shows the Volume page filled out for the CIFS protocol:
++
+image:screenshot_cot_vol.gif[Screen shot: Shows the Volume page filled out for a Cloud Volumes ONTAP instance.]
+
+. *CIFS Setup*: If you chose the CIFS protocol, set up a CIFS server.
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| DNS Primary and Secondary IP Address | The IP addresses of the DNS servers that provide name resolution for the CIFS server.
+The listed DNS servers must contain the service location records (SRV) needed to locate the Active Directory LDAP servers and domain controllers for the domain that the CIFS server will join.
+
+| Active Directory Domain to join | The FQDN of the Active Directory (AD) domain that you want the CIFS server to join.
+
+| Credentials authorized to join the domain | The name and password of a Windows account with sufficient privileges to add computers to the specified Organizational Unit (OU) within the AD domain.
+
+| CIFS server NetBIOS name | A CIFS server name that is unique in the AD domain.
+
+| Organizational Unit | The organizational unit within the AD domain to associate with the CIFS server. The default is CN=Computers.
+
+To configure Azure AD Domain Services as the AD server for Cloud Volumes ONTAP, you should enter *OU=AADDC Computers* or *OU=AADDC Users* in this field.
+https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-ou[Azure Documentation: Create an Organizational Unit (OU) in an Azure AD Domain Services managed domain^]
+
+| DNS Domain | The DNS domain for the Cloud Volumes ONTAP storage virtual machine (SVM). In most cases, the domain is the same as the AD domain.
+
+| NTP Server | Select *Use Active Directory Domain* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/bluexp-automation/index.html[BlueXP automation docs^] for details.
+
+Note that you can configure an NTP server only when creating a CIFS server. It's not configurable after you create the CIFS server.
+|===
+
+. *Usage Profile, Disk Type, and Tiering Policy*: Choose whether you want to enable storage efficiency features and change the volume tiering policy, if needed.
++
+For more information, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#choose-a-volume-usage-profile[Choose a volume usage profile^] and link:concept-data-tiering.html[Data tiering overview^].
+
+. *Review & Approve*: Review and confirm your selections.
+
+.. Review details about the configuration.
+
+.. Click *More information* to review details about support and the Azure resources that BlueXP will purchase.
+
+.. Select the *I understand...* check boxes.
+
+.. Click *Go*.
+
+.Result
+
+BlueXP deploys the Cloud Volumes ONTAP system. You can track the progress in the timeline.
+
+If you experience any issues deploying the Cloud Volumes ONTAP system, review the failure message. You can also select the working environment and click *Re-create environment*.
+
+For additional help, go to https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab[NetApp Cloud Volumes ONTAP Support^].
+
+.After you finish
+
+* If you provisioned a CIFS share, give users or groups permissions to the files and folders and verify that those users can access the share and create a file.
+
+* If you want to apply quotas to volumes, use System Manager or the CLI.
++
+Quotas enable you to restrict or track the disk space and number of files used by a user, group, or qtree.

@@ -1,0 +1,107 @@
+---
+sidebar: sidebar
+permalink: concept-security.html
+keywords: security, encryption, antivirus, concepts, key managers, safenet, kms, keys, vscan, encrypt, key management service, cmk, customer master key, data at rest, data-at-rest, netapp storage encryption, certificate signing request, csr, certificate, ca certificate, virus, scan, virus scan, certificate authority, netapp volume encryption, nve, volume encryption, key management server, ransomware, fpolicy, snapshots
+summary: Cloud Volumes ONTAP supports data encryption and provides protection against viruses and ransomware.
+---
+
+= Security
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP supports data encryption and provides protection against viruses and ransomware.
+
+== Encryption of data at rest
+
+Cloud Volumes ONTAP supports the following encryption technologies:
+
+* NetApp encryption solutions (NVE and NAE)
+ifdef::aws[]
+* AWS Key Management Service
+endif::aws[]
+ifdef::azure[]
+* Azure Storage Service Encryption
+endif::azure[]
+ifdef::gcp[]
+* Google Cloud Platform default encryption
+endif::gcp[]
+
+You can use NetApp encryption solutions with native encryption from your cloud provider, which encrypts data at the hypervisor level. Doing so would provide double encryption, which might be desired for very sensitive data. When the encrypted data is accessed, it’s unencrypted twice—once at the hypervisor-level (using keys from the cloud provider) and then again using NetApp encryption solutions (using keys from an external key manager).
+
+=== NetApp encryption solutions (NVE and NAE)
+
+Cloud Volumes ONTAP supports https://www.netapp.com/us/media/ds-3899.pdf[NetApp Volume Encryption (NVE) and NetApp Aggregate Encryption (NAE)^]. NVE and NAE are software-based solutions that enable (FIPS) 140-2–compliant data-at-rest encryption of volumes. Both NVE and NAE use AES 256-bit encryption.
+
+* NVE encrypts data at rest one volume a time. Each data volume has its own unique encryption key.
+* NAE is an extension of NVE--it encrypts data for each volume, and the volumes share a key across the aggregate. NAE also allows common blocks across all volumes in the aggregate to be deduplicated.
+
+Both NVE and NAE are supported with an external key manager.
+
+ifdef::azure,gcp[]
+If you use NVE, you have the option to use your cloud provider's key vault to protect ONTAP encryption keys:
+
+ifdef::azure[]
+* Azure Key Vault (AKV)
+endif::azure[]
+ifdef::gcp[]
+* Google Cloud Key Management Service
+endif::gcp[]
+endif::azure,gcp[]
+
+New aggregates have NetApp Aggregate Encryption (NAE) enabled by default after you set up an external key manager. New volumes that aren't part of an NAE aggregate will have NetApp Volume Encryption (NVE) enabled by default (for example, if you have existing aggregates that were created before setting up an external key manager).
+
+Setting up a supported key manager is the only required step. For set up instructions, refer to link:task-encrypting-volumes.html[Encrypting volumes with NetApp encryption solutions].
+
+ifdef::aws[]
+=== AWS Key Management Service
+
+When you launch a Cloud Volumes ONTAP system in AWS, you can enable data encryption using the http://docs.aws.amazon.com/kms/latest/developerguide/overview.html[AWS Key Management Service (KMS)^]. BlueXP requests data keys using a customer master key (CMK).
+
+TIP: You can't change the AWS data encryption method after you create a Cloud Volumes ONTAP system.
+
+If you want to use this encryption option, then you must ensure that the AWS KMS is set up appropriately. For details, see link:task-setting-up-kms.html[Setting up the AWS KMS].
+endif::aws[]
+
+ifdef::azure[]
+=== Azure Storage Service Encryption
+
+Data is automatically encrypted on Cloud Volumes ONTAP in Azure using https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/[Azure Storage Service Encryption^] with a Microsoft-managed key.
+
+You can use your own encryption keys if you prefer. link:task-set-up-azure-encryption.html[Learn how to set up Cloud Volumes ONTAP to use a customer-managed key in Azure].
+endif::azure[]
+
+ifdef::gcp[]
+=== Google Cloud Platform default encryption
+
+https://cloud.google.com/security/encryption-at-rest/[Google Cloud Platform data-at-rest encryption^] is enabled by default for Cloud Volumes ONTAP. No setup is required.
+
+While Google Cloud Storage always encrypts your data before it's written to disk, you can use BlueXP APIs to create a Cloud Volumes ONTAP system that uses _customer-managed encryption keys_. These are keys that you generate and manage in GCP using the Cloud Key Management Service. link:task-setting-up-gcp-encryption.html[Learn more].
+endif::gcp[]
+
+== ONTAP virus scanning
+
+You can use integrated antivirus functionality on ONTAP systems to protect data from being compromised by viruses or other malicious code.
+
+ONTAP virus scanning, called _Vscan_, combines best-in-class third-party antivirus software with ONTAP features that give you the flexibility you need to control which files get scanned and when.
+
+For information about the vendors, software, and versions supported by Vscan, see the http://mysupport.netapp.com/matrix[NetApp Interoperability Matrix^].
+
+For information about how to configure and manage the antivirus functionality on ONTAP systems, see the http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html[ONTAP 9 Antivirus Configuration Guide^].
+
+== Ransomware protection
+
+Ransomware attacks can cost a business time, resources, and reputation. BlueXP enables you to implement the NetApp solution for ransomware, which provides effective tools for visibility, detection, and remediation.
+
+* BlueXP identifies volumes that are not protected by a Snapshot policy and enables you to activate the default Snapshot policy on those volumes.
++
+Snapshot copies are read-only, which prevents ransomware corruption. They can also provide the granularity to create images of a single file copy or a complete disaster recovery solution.
+
+* BlueXP also enables you to block common ransomware file extensions by enabling ONTAP's FPolicy solution.
+
+image:screenshot_ransomware_protection.gif[A screenshot that shows the Ransomware Protection page that is available from within a working environment. The screen shows the number of volumes without a Snapshot Policy and the ability to block ransomware file extensions.]
+
+link:task-protecting-ransomware.html[Learn how to implement the NetApp solution for ransomware].
