@@ -1,0 +1,75 @@
+---
+sidebar: sidebar
+permalink: reference-limitations.html
+keywords: limitations, flexgroup, ontap s3, s3 configuration, svm dr, svm disaster recovery, disaster recovery, storage vm dr, BlueXP, cloud manager
+summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+These limitations are specific to Cloud Volumes ONTAP management in BlueXP. To view limitations with the Cloud Volumes ONTAP software itself, https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limitations.html[go to the Cloud Volumes ONTAP Release Notes^]
+
+== BlueXP doesn't support FlexGroup volumes creation
+
+While Cloud Volumes ONTAP supports FlexGroup volumes, BlueXP does not currently support FlexGroup volume creation. If you create a FlexGroup volume from System Manager or from the CLI, then you should set BlueXP's Capacity Management mode to Manual. Automatic mode might not work properly with FlexGroup volumes.
+
+NOTE: The ability to create FlexGroup volumes in BlueXP is planned for a future release. 
+
+== BlueXP doesn't support S3 with Cloud Volumes ONTAP
+
+While Cloud Volumes ONTAP supports S3 as an option for scale-out storage, BlueXP doesn't provide any management capabilities for this feature. Using the CLI is the best practice to configure S3 client access from Cloud Volumes ONTAP. For details, refer to the http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html[S3 Configuration Power Guide^].
+
+link:concept-client-protocols.html[Learn more about Cloud Volumes ONTAP support for S3 and other client protocols].
+
+== BlueXP doesn't support disaster recovery for storage VMs
+
+BlueXP doesn't provide any setup or orchestration support for storage VM (SVM) disaster recovery. You must use System Manager or the CLI.
+
+link:task-manage-svm-dr.html[Learn more about SVM disaster recovery].
+
+== Testing AsciiDoc character replacement and intrinsic attributes
+Testing end-to-end through localization and publishing of all languages. 
+
+.Asterisk 
+{asterisk}
+Text{asterisk}
+Text {asterisk}
+Text {asterisk} text
+
+.Double colon
+{two-colons}
+Text{two-colons}
+Text {two-colons}
+Text {two-colons} text
+
+.Vertical bar
+{vbar}
+Text{vbar}
+Text {vbar}
+Text {vbar} text
+
+.Plus
+{plus}
+Text{plus}
+Text {plus}
+Text {plus} text
+
+.Square brackets
+{startsb} and {endsb}
+Text{startsb} and text{endsb}
+Text {startsb} and text {endsb}
+Text {startsb} and text {endsb} text
+
+.Non-breaking space
+Before{nbsp}After
+
+.Zero-width space
+Before{zwsp}After

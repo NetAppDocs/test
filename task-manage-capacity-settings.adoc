@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: task-manage-capacity-settings.html
+keywords: aggregates, delete aggregates, add disks, view aggregates
+summary: Manage aggregates yourself by adding disks, viewing information about the aggregates, and by deleting them.
+---
+
+= Manage capacity settings on a Connector
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Each Connector has settings that determines how it manages aggregate capacity for Cloud Volumes ONTAP.
+
+These settings affect all Cloud Volumes ONTAP systems managed by a Connector. If you have another Connector, it can be configured differently.
+
+.Required permissions
+
+Account Admin privileges are required to modify Connector settings.
+
+.Steps
+
+.	In the upper right of the BlueXP console, click the Settings icon, and select *Connector Settings*.
++
+image::screenshot_settings_connector_button.png[width=400 A screenshot of the Connector Settings option under teh Settings icon.]
+
+.	Under *Capacity*, modify any of the following settings:
++
+Capacity Management Mode::
+Choose whether BlueXP notifies you of storage capacity decisions or whether BlueXP automatically manages capacity requirements for you.
++
+link:concept-storage-management.html#capacity-management[Learn how Capacity Management Mode works].
+
+Aggregate Capacity Threshold - Free Space Ratio::
+Triggers a notification when the free space ratio on an aggregate drops below the specified threshold.
++
+The free space ratio is calculated as follows:
++
+(aggregate capacity - total used capacity on the aggregate) / aggregate capacity
+
+Aggregate Capacity Thresholds - Free Space Ratio for Data Tiering::
+Defines how much free space is required on the performance tier (disks) when tiering data to a capacity tier (object storage).
++
+The ratio is important for disaster recovery scenarios. As data is read from the capacity tier, Cloud Volumes ONTAP moves data to the performance tier to provide better performance. If there isn't sufficient space, then Cloud Volumes ONTAP can't move the data.
+
+. Click *Save*.

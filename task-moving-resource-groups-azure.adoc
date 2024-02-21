@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: task-moving-resource-groups-azure.html
+keywords: move resource groups, azure, remove working environment, resource groups, azure console, Azure subscriptions
+summary: Cloud Volumes ONTAP supports Azure resource groups moves but the workflow happens in the Azure console only. 
+---
+
+= Moving resource groups
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP supports Azure resource groups moves but the workflow happens in the Azure console only. 
+
+You can move a working environment from one resource group to a different resource group in Azure within the same Azure subscription. Moving resource groups between different Azure subscriptions is not supported. 
+
+.Steps
+. Remove the working environment from *Canvas*. 
++ 
+To learn how to remove a working environment, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-removing.html[Removing Cloud Volumes ONTAP working environments]. 
+. Execute the resource group move in the Azure console.
++
+To complete the move, refer to link:https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription[Move resources to a new resource group or subscription in Microsoft Azure’s documentation^].
+. In *Canvas*, discover the working environment. 
+. Look for the new resource group in the information for the working environment. 
+
+.Result
+
+The working environment and its resources (VMs, disks, storage accounts, network interfaces, snapshots) are in the new resource group. 

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: task-deleting-working-env.html
+keywords: terminate, delete, working environment, remove, terminate working environment, terminate instance, delete cloud volumes ontap, delete instance, delete working environment, delete backups, cloud backup, cloud data sense
+summary: You should always delete Cloud Volumes ONTAP systems from BlueXP, rather than from your cloud provider's console. For example, if you terminate a licensed Cloud Volumes ONTAP instance from your cloud provider, then you can't use the license key for another instance. You must delete the working environment from BlueXP to release the license.
+---
+
+= Deleting a Cloud Volumes ONTAP system
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You should always delete Cloud Volumes ONTAP systems from BlueXP, rather than from your cloud provider's console. For example, if you terminate a licensed Cloud Volumes ONTAP instance from your cloud provider, then you can't use the license key for another instance. You must delete the working environment from BlueXP to release the license.
+
+When you delete a working environment, BlueXP terminates Cloud Volumes ONTAP instances and deletes disks and snapshots.
+
+Resources managed by other services like backups for BlueXP backup and recovery and instances for BlueXP classification are not deleted when you delete a working environment. You'll need to manually delete them yourself. If you don't, then you'll continue to receive charges for these resources.
+
+NOTE: When BlueXP deploys Cloud Volumes ONTAP in your cloud provider, it enables termination protection on the instances. This option helps prevent accidental termination.
+
+.Steps
+
+. If you enabled BlueXP backup and recovery on the working environment, determine whether the backed up data is still required and then https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups[delete the backups, if necessary^].
++
+BlueXP backup and recovery is independent from Cloud Volumes ONTAP by design. BlueXP backup and recovery doesn't automatically delete backups when you delete a Cloud Volumes ONTAP system, and there is no current support in the UI to delete the backups after the system has been deleted.
+
+. If you enabled BlueXP classification on this working environment and no other working environments use this service, then you'll need to delete the instance for the service.
++
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance[Learn more about the BlueXP classification instance^].
+
+. Delete the Cloud Volumes ONTAP working environment.
+
+.. On the Canvas page, double-click the name of the Cloud Volumes ONTAP working environment that you want to delete.
+
+.. On the upper right of the BlueXP console, click the ellipse icon, and select *Delete*.
++
+image:screenshot_settings_delete.png[A screenshot that shows the menu available from the working environment that contains the Delete action.]
+
+.. Under the Delete Working Environment window, type the name of the working environment and then click *Delete*.
++
+It can take up to 5 minutes to delete the working environment.

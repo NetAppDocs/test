@@ -1,0 +1,98 @@
+---
+sidebar: sidebar
+permalink: reference-versions.html
+keywords: versions, supported versions, new versions, cloud volumes ontap version
+summary: BlueXP enables you to choose from several different ONTAP versions when you create a new Cloud Volumes ONTAP working environment.
+---
+
+= Supported versions for new deployments
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+BlueXP enables you to choose from several different ONTAP versions when you create a new Cloud Volumes ONTAP working environment.
+
+All other Cloud Volumes ONTAP versions are not supported with new deployments.
+
+ifdef::aws[]
+== AWS
+
+Single node::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.12.0 P1
+* 9.11.1 P3
+* 9.10.1
+* 9.9.1 P6
+* 9.8
+* 9.7 P5
+* 9.5 P6
+
+HA pair::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.12.0 P1
+* 9.11.1 P3
+* 9.10.1
+* 9.9.1 P6
+* 9.8
+* 9.7 P5
+* 9.5 P6
+endif::aws[]
+
+ifdef::azure[]
+== Azure
+
+Single node::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.11.1 P3
+* 9.10.1 P3
+* 9.9.1 P8
+* 9.9.1 P7
+* 9.8 P10
+* 9.7 P6
+* 9.5 P6
+
+HA pair::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.11.1 P3
+* 9.10.1 P3
+* 9.9.1 P8
+* 9.9.1 P7
+* 9.8 P10
+* 9.7 P6
+endif::azure[]
+
+ifdef::gcp[]
+== Google Cloud
+
+Single node::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.12.0 P1
+* 9.11.1 P3
+* 9.10.1
+* 9.9.1 P6
+* 9.8
+* 9.7 P5
+
+HA pair::
+* 9.13.1 GA
+* 9.12.1 GA
+* 9.12.1 RC1
+* 9.12.0 P1
+* 9.11.1 P3
+* 9.10.1
+* 9.9.1 P6
+* 9.8
+endif::gcp[]

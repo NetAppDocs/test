@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: task-sync-time.html
+keywords: set up, setting up, ntp, time, synch
+summary: Specifying an NTP server synchronizes the time between the systems in your network, which can help prevent issues due to time differences.
+---
+
+= Synchronize the system time using NTP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Specifying an NTP server synchronizes the time between the systems in your network, which can help prevent issues due to time differences.
+
+Specify an NTP server using the https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html[BlueXP API^] or from the user interface when you link:task-create-volumes.html#create-a-volume[create a CIFS server].

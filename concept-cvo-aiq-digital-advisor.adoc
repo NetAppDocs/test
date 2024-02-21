@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: concept-cvo-aiq-digital-advisor.html
+keywords: concepts, active iq digital advisor, cloud volumes ontap, cloud manager, BlueXP
+summary: Active IQ Digital Advisor is integrated into the BlueXP UI so that you can optimize the operations, security, and performance of your ONTAP clusters in a single pane of glass.
+---
+
+= Optimize your Cloud Volumes ONTAP systems using Active IQ Digital Advisor
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+https://www.netapp.com/services/support/active-iq/[Active IQ Digital Advisor] is integrated into the BlueXP UI so that you can optimize the operations, security, and performance of your Cloud Volumes ONTAP systems in a single pane of glass.
+
+== Features
+
+You can view the overall status of your storage system, high-level information about the wellness of the system, inventory, planning, and valuable insights at a watchlist level using Active IQ Digital Advisor.
+
+* Analyze and optimize the health of your storage systems
+* Gain insights regarding all the risks to your storage systems and the actions to mitigate the risks
+* Analyze the performance of your storage devices by viewing the graphical format of performance data
+* Get details about systems that have exceeded 90% capacity or are nearing 90% capacity
+
+== Supported ONTAP systems
+
+Active IQ Digital Advisor provides information for all the on-premises ONTAP systems and Cloud Volumes ONTAP systems within your NSS account.
+
+== Cost
+
+There's no cost to use this service through BlueXP.
+
+== How Active IQ Digital Advisor works with BlueXP
+
+The Active IQ Digital Advisor user interface is completely integrated in BlueXP.
+
+In BlueXP, click the *Active IQ* service.
+
+* If you have already registered an existing NSS account in BlueXP, the Active IQ Digital Advisor UI appears just like you would see it in a standalone implementation at https://activeiq.netapp.com/.
++
+image:screenshot_aiq_digital_advisor.png[A screenshot of the Active IQ Digital Advisor user interface in BlueXP.]
+
+* If you haven't registered an NSS account in BlueXP, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html[register an NSS account now^] and then the Active IQ Digital Advisor UI appears.
+
+NOTE: As of December 3, 2021, NetApp has switched to a new methodology of registering credentials for NSS accounts. https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login[See this FAQ for details]. If your NSS account uses the old set of credentials you will need to update the account to the new credentials.
+
+== What's next
+
+See the https://docs.netapp.com/us-en/active-iq/index.html[Active IQ Digital Advisor documentation] for details.

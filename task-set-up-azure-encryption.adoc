@@ -1,0 +1,201 @@
+---
+sidebar: sidebar
+permalink: task-set-up-azure-encryption.html
+keywords: customer-managed key, customer key, azure storage service encryption, azure encryption, encryption key, azure encryption key
+summary: Data is automatically encrypted on Cloud Volumes ONTAP in Azure using Azure Storage Service Encryption with a Microsoft-managed key. But you can use your own encryption key instead by following the steps on this page.
+---
+
+= Set up Cloud Volumes ONTAP to use a customer-managed key in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Data is automatically encrypted on Cloud Volumes ONTAP in Azure using https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/[Azure Storage Service Encryption] with a Microsoft-managed key. But you can use your own encryption key instead by following the steps on this page.
+
+== Data encryption overview
+
+Cloud Volumes ONTAP data is automatically encrypted in Azure using https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/[Azure Storage Service Encryption^]. The default implementation uses a Microsoft-managed key. No setup is required.
+
+If you want to use a customer-managed key with Cloud Volumes ONTAP, then you need to complete the following steps:
+
+. From Azure, create a key vault and then generate a key in that vault
+. From BlueXP, use the API to create a Cloud Volumes ONTAP working environment that uses the key
+
+=== Key rotation
+
+If you create a new version of your key, Cloud Volumes ONTAP automatically uses the latest key version.
+
+=== How data is encrypted
+
+After you create a Cloud Volumes ONTAP working environment that is configured to use a customer-managed key, Cloud Volumes ONTAP data is encrypted as follows.
+
+Azure HA multiple availability zone::
+
+* All Azure storage accounts for Cloud Volumes ONTAP are encrypted using a customer-managed key.^1^ 
+
+* For root, boot, NVRAM, core and data disks, BlueXP uses a disk encryption set, which enables management of encryption keys with managed disks.
+
+* Any new data disks also use the same disk encryption set.
+
+Azure HA single availability zone::
+
+* All Azure storage accounts for Cloud Volumes ONTAP are encrypted using a customer-managed key.^1^
+
+* Any new storage accounts (for example, when you add disks or aggregates) also use the same key.^1^
+
+* From ONTAP 9.10.1P3, For NVRAM and the core disk, BlueXP uses a https://docs.microsoft.com/en-us/azure/virtual-machines/disk-encryption[disk encryption set^], which enables management of encryption keys with managed disks. Lower versions will use Microsoft-managed key, instead of the customer-managed key. 
+
+Single node::
+
+* All Azure storage accounts for Cloud Volumes ONTAP are encrypted using a customer-managed key. ^1^
+
+* For root, boot, and data disks, BlueXP uses a https://docs.microsoft.com/en-us/azure/virtual-machines/disk-encryption[disk encryption set^], which enables management of encryption keys with managed disks.
+
+* Any new data disks also use the same disk encryption set.
+
+* From ONTAP 9.9.1P7, for NVRAM and the core disk, BlueXP uses a disk encryption set, which enables management of encryption keys with managed disks. Lower versions will use Microsoft-managed key, instead of the customer-managed key.
+
+.Footnote
+. If you want to encrypt your storage accounts during their creation, you must create and provide the ID of the resource in the CVO creation request. This applies for all type of deployments. If you do not provide it, the storage accounts still will be encrypted, but BlueXP will first create the storage accounts with Microsoft-managed key encryption and then will update the storage accounts to use the customer-managed key.
+
+== Create a user-assigned managed identity
+You have the option to create a resource called a user-assigned managed identity. Doing so allows you to encrypt your storage accounts when you create a Cloud Volumes ONTAP working environment. We recommend creating this resource prior to creating a key vault and generating a key.
+
+The resource has the following ID: `userassignedidentity`.
+
+.Steps
+. In Azure, go to Azure services and select *Managed Identities*.
+
+. Click *Create*.
+
+. Provide the following details:
++
+* *Subscription*: Choose a subscription. We recommend choosing the same subscription as the Connector subscription.
+* *Resource group*: Use an existing resource group or create a new one.
+* *Region*: Optionally, select the same region as the Connector.
+* *Name*: Enter a name for the resource.
+
+. Optionally, add tags.
+
+. Click *Create*.
+
+== Create a key vault and generate a key
+
+The key vault must reside in the same Azure subscription and region in which you plan to create the Cloud Volumes ONTAP system.
+
+If you <<Create a user-assigned managed identity,created a user-assigned managed identity>>, while creating the key vault, you should also create an access policy for the key vault.
+
+.Steps
+
+. https://docs.microsoft.com/en-us/azure/key-vault/general/quick-create-portal[Create a key vault in your Azure subscription^].
++
+Note the following requirements for the key vault:
++
+* The key vault must reside in the same region as the Cloud Volumes ONTAP system.
+* The following options should be enabled:
+** *Soft-delete* (this option is enabled by default, but must _not_ be disabled)
+** *Purge protection*
+** *Azure Disk Encryption for volume encryption* (for single node systems or HA pairs in multiple zones)
+* The following option should be enabled if you created a user-assigned managed identity:
+** *Vault access policy*
+. If you selected Vault access policy, click Create to create an access policy for the key vault. If not, skip to step 3.
+.. Select the following permissions:
++
+* get
+* list
+* decrypt
+* encrypt
+* unwrap key
+* wrap key
+* verify
+* sign
+.. Select the user-assigned managed identity (resource) as the principal.
+.. Review and create the access policy.
+. https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-portal#add-a-key-to-key-vault[Generate a key in the key vault^].
++
+Note the following requirements for the key:
++
+* The key type must be *RSA*.
+* The recommended RSA key size is *2048*, but other sizes are supported.
+
+== Create a working environment that uses the encryption key
+
+After you create the key vault and generate an encryption key, you can create a new Cloud Volumes ONTAP system that is configured to use the key. These steps are supported by using the BlueXP API.
+
+.Required permissions
+
+If you want to use a customer-managed key with a single node Cloud Volumes ONTAP system, ensure that the BlueXP Connector has the following permissions:
+
+[source,json]
+"Microsoft.Compute/diskEncryptionSets/read",
+"Microsoft.Compute/diskEncryptionSets/write",
+"Microsoft.Compute/diskEncryptionSets/delete"
+"Microsoft.KeyVault/vaults/deploy/action",
+"Microsoft.KeyVault/vaults/read",
+"Microsoft.KeyVault/vaults/accessPolicies/write",
+"Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[View the latest list of permissions^]
+
+.Steps
+
+. Obtain the list of key vaults in your Azure subscription by using the following BlueXP API call.
++
+For an HA pair: `GET /azure/ha/metadata/vaults`
++
+For single node: `GET /azure/vsa/metadata/vaults`
++
+Make note of the *name* and *resourceGroup*. You'll need to specify those values in the next step.
++
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-hametadata[Learn more about this API call^].
+
+. Obtain the list of keys within the vault by using the following BlueXP API call.
++
+For an HA pair: `GET /azure/ha/metadata/keys-vault`
++
+For single node: `GET /azure/vsa/metadata/keys-vault`
++
+Make note of the *keyName*. You'll need to specify that value (along with the vault name) in the next step.
++
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-hametadata[Learn more about this API call^].
+
+. Create a Cloud Volumes ONTAP system by using the following BlueXP API call.
+
+.. For an HA pair:
++
+`POST /azure/ha/working-environments`
++
+The request body must include the following fields:
++
+[source, json, indent=0]
+"azureEncryptionParameters": {
+              "key": "keyName",
+              "vaultName": "vaultName"
+}
++
+NOTE: Include the `"userAssignedIdentity": " userAssignedIdentityId"` field if you created this resource to be used for storage account encryption.
++
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-haworking-environments[Learn more about this API call^].
+
+.. For a single node system:
++
+`POST /azure/vsa/working-environments`
++
+The request body must include the following fields:
++
+[source, json]
+"azureEncryptionParameters": {
+              "key": "keyName",
+              "vaultName": "vaultName"
+}
++
+NOTE: Include the `"userAssignedIdentity": " userAssignedIdentityId"` field if you created this resource to be used for storage account encryption.
++
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-vsaworking-environments[Learn more about this API call^].
+
+.Result
+
+You have a new Cloud Volumes ONTAP system that is configured to use your customer-managed key for data encryption.

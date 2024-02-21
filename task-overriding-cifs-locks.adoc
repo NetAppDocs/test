@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: task-overriding-cifs-locks.html
+keywords: CIFS locks, azure maintenance, maintenance events, cifs sessions, storage failover, storage giveback, giveback
+summary: The Account Admin can enable a setting in BlueXP that prevents issues with Cloud Volumes ONTAP storage giveback during Azure maintenance events. When you enable this setting, Cloud Volumes ONTAP vetoes CIFS locks and resets active CIFS sessions.
+---
+
+= Overriding CIFS locks for Cloud Volumes ONTAP HA pairs in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Account Admin can enable a setting in BlueXP that prevents issues with Cloud Volumes ONTAP storage giveback during Azure maintenance events. When you enable this setting, Cloud Volumes ONTAP vetoes CIFS locks and resets active CIFS sessions.
+
+.About this task
+
+Microsoft Azure schedules periodic maintenance events on its virtual machines. When a maintenance event occurs on a Cloud Volumes ONTAP HA pair, the HA pair initiates storage takeover. If there are active CIFS sessions during this maintenance event, the locks on CIFS files can prevent storage giveback.
+
+If you enable this setting, Cloud Volumes ONTAP will veto the locks and reset the active CIFS sessions. As a result, the HA pair can complete storage giveback during these maintenance events.
+
+CAUTION: This process might be disruptive to CIFS clients. Data that is not committed from CIFS clients could be lost.
+
+.What you'll need
+
+You need to create a Connector before you can change BlueXP settings. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#how-to-create-a-connector[Learn how^].
+
+.Steps
+
+. In the upper right of the BlueXP console, click the Settings icon, and select *Connector Settings*.
++
+image:screenshot_settings_icon.png[A screenshot that shows the Settings icon in the upper right of the BlueXP console.]
+
+. Under *Azure*, click *Azure CIFS locks for Azure HA working environments*.
+
+. Click the checkbox to enable the feature and then click *Save*.
