@@ -1,0 +1,4263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>What's new | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="What's new | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/test/whats-new.html" />
+	<meta property="og:description" content="Learn what's new with Cloud Volumes ONTAP management in BlueXP." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/test/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Learn what's new with Cloud Volumes ONTAP management in BlueXP.">
+  <meta name="keywords" content=" what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager, BlueXP, digital wallet, cloud backup, cloud data sense, cloud tiering, keystone flex, keystone"><!-- Icons -->
+  <link rel="icon" href="/us-en/test/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/us-en/test/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/test/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/us-en/test/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/test/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/us-en/test/whats-new.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/test/whats-new.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/test/whats-new.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/test/whats-new.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/test/whats-new.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/test/whats-new.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/test/whats-new.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/test/whats-new.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/test/whats-new.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/test/whats-new.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/test/whats-new.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/test/js/na-search.js'></script><script src='/us-en/test/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/us-en/test/js/custom-dropdown.js'></script>
+  <script src='/us-en/test/js/FileSaver.min.js'></script>
+  <script src='/us-en/test/js/jszip-utils.min.js'></script>
+  <script src='/us-en/test/js/jszip.min.js'></script><script src='/us-en/test/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="aws">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/us-en/test/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/">
+                <image id="ie-header-logo" src="/us-en/test/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">Docs</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/us-en/test/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">English</span>
+                    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/us-en/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/test/whats-new.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/us-en/test/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">All NetApp</span>
+                    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Support</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/us-en/test/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/us-en/test/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">All docs</a>
+    </li>
+    
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/cloud/">Cloud docs</a>
+    </li>
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/bluexp-family/">
+        BlueXP
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/us-en/test/">-->
+      Cloud Volumes ONTAP
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 9.13.1">
+    <label>Version</label>
+    <span translate="no" class="notranslate">9.13.1</span>
+    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9130-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9110-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9100-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-991-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.9.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-990-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.9.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-98-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.8</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-97-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.7</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-96-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.6</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-95-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.5</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-94-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.4</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-93-relnotes/whats-new.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.3</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div>
+<div id="flavor-dropdown" class="custom-dropdown" data-url="/us-en/test/whats-new.html">
+  
+  
+  <div class="custom-dropdown-select selected" title="AWS">
+    <label>Cloud provider</label>
+    <div>AWS</div>  
+    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown flavor invisible" />
+    <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup flavor" />
+    <!--<img src="/us-en/test/images/dismiss.svg" class="custom-icon selected" id="remove-flavor" alt="" />-->
+  </div>
+  
+
+  <ul class="custom-dropdown-menu">
+    
+    
+    <li data-value="aws" data-url="/us-en/test/aws/whats-new.html">Amazon Web Services
+    </li>
+    
+    
+    
+    <li data-value="gcp" data-url="/us-en/test/gcp/whats-new.html">Google Cloud
+    </li>
+    
+    
+    
+    <li data-value="azure" data-url="/us-en/test/azure/whats-new.html">Microsoft Azure
+    </li>
+    
+    
+    <li data-url="/us-en/test/whats-new.html">All cloud providers</li>
+  </ul>
+</div>
+</div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/us-en/test/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/us-en/test/aws/search.html" 
+        data-type="widget"
+        data-placeholder="Search documentation"
+        data-no-results-found="No results were found for {query}"
+        data-did-you-mean="Search for {suggestion}."
+        data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?"
+        data-results-found="{hitCount} results found"
+        data-error-message="An error occurred. Please try again."
+        data-error-reset="Reset search"
+        data-sk-es-pf-indexes="" 
+        data-flavor="aws">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP docs"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/test/aws/index.html">
+        Cloud Volumes ONTAP docs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Release notes"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Release notes</div>-->
+         Release notes
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="What's new"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/whats-new.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/whats-new.html">
+        What's new
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Known limitations"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/reference-limitations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/reference-limitations.html">
+        Known limitations
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP Release Notes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/whats-new-ontap.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/whats-new-ontap.html">
+        Cloud Volumes ONTAP Release Notes
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started</div>-->
+         Get started
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-overview-cvo.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-overview-cvo.html">
+        Learn about Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported versions for new deployments"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/reference-versions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/reference-versions.html">
+        Supported versions for new deployments
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started in Amazon Web Services"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started in Amazon Web Services</div>-->
+         Get started in Amazon Web Services
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Quick start"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-getting-started-aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-getting-started-aws.html">
+        Quick start
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan your configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-planning-your-config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-planning-your-config.html">
+        Plan your configuration
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up your networking"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Set up your networking</div>-->
+         Set up your networking
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Networking requirements"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/reference-networking-aws.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/reference-networking-aws.html">
+        Networking requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up an AWS transit gateway"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-setting-up-transit-gateway.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-setting-up-transit-gateway.html">
+        Set up an AWS transit gateway
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy an HA pair in a shared subnet"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-deploy-aws-shared-vpc.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-deploy-aws-shared-vpc.html">
+        Deploy an HA pair in a shared subnet
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security group rules for AWS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/reference-security-groups.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/reference-security-groups.html">
+        Security group rules for AWS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up the AWS KMS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-setting-up-kms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-setting-up-kms.html">
+        Set up the AWS KMS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up IAM roles"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-set-up-iam-roles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-set-up-iam-roles.html">
+        Set up IAM roles
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up licensing"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-set-up-licensing-aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-set-up-licensing-aws.html">
+        Set up licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Launch Cloud Volumes ONTAP in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-deploying-otc-aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-deploying-otc-aws.html">
+        Launch Cloud Volumes ONTAP in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started in AWS C2S"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-getting-started-aws-c2s.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-getting-started-aws-c2s.html">
+        Get started in AWS C2S
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use Cloud Volumes ONTAP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Use Cloud Volumes ONTAP</div>-->
+         Use Cloud Volumes ONTAP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="License management"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> License management</div>-->
+         License management
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage capacity-based licenses"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-capacity-licenses.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-capacity-licenses.html">
+        Manage capacity-based licenses
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage Keystone Subscriptions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-keystone.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-keystone.html">
+        Manage Keystone Subscriptions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage node-based licenses"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-node-licenses.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-node-licenses.html">
+        Manage node-based licenses
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volume and LUN administration"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Volume and LUN administration</div>-->
+         Volume and LUN administration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-create-volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-create-volumes.html">
+        Create volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage existing volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-volumes.html">
+        Manage existing volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier inactive data to object storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-tiering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-tiering.html">
+        Tier inactive data to object storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connect a LUN to a host"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-connect-lun.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-connect-lun.html">
+        Connect a LUN to a host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accelerate data access with FlexCache"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-accelerate-data-access.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-accelerate-data-access.html">
+        Accelerate data access with FlexCache
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggregate administration"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Aggregate administration</div>-->
+         Aggregate administration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create aggregates"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-create-aggregates.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-create-aggregates.html">
+        Create aggregates
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage existing aggregates"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-aggregates.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-aggregates.html">
+        Manage existing aggregates
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage capacity settings"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-capacity-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-capacity-settings.html">
+        Manage capacity settings
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage VM administration"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage VM administration</div>-->
+         Storage VM administration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Work with storage VMs in BlueXP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-managing-svms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-managing-svms.html">
+        Work with storage VMs in BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create storage VMs in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-managing-svms-aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-managing-svms-aws.html">
+        Create storage VMs in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up SVM disaster recovery"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-manage-svm-dr.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-manage-svm-dr.html">
+        Set up SVM disaster recovery
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security and data encryption"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Security and data encryption</div>-->
+         Security and data encryption
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Encrypt volumes with NetApp encryption"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-encrypting-volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-encrypting-volumes.html">
+        Encrypt volumes with NetApp encryption
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage keys with AWS Key Management Service"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-aws-key-management.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-aws-key-management.html">
+        Manage keys with AWS Key Management Service
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Improve ransomware protection"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-protecting-ransomware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-protecting-ransomware.html">
+        Improve ransomware protection
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="System administration"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> System administration</div>-->
+         System administration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Upgrade Cloud Volumes ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-updating-ontap-cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-updating-ontap-cloud.html">
+        Upgrade Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Register pay-as-you-go systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-registering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-registering.html">
+        Register pay-as-you-go systems
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Stop and start a system"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-managing-state.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-managing-state.html">
+        Stop and start a system
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Synchronize system time"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-sync-time.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-sync-time.html">
+        Synchronize system time
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modify system write speed"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-modify-write-speed.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-modify-write-speed.html">
+        Modify system write speed
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change the system password"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-change-password.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-change-password.html">
+        Change the system password
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add, remove, or delete systems"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Add, remove, or delete systems</div>-->
+         Add, remove, or delete systems
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add an existing system"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-adding-systems.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-adding-systems.html">
+        Add an existing system
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Remove a working environment"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-removing.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-removing.html">
+        Remove a working environment
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Delete a system"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-deleting-working-env.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-deleting-working-env.html">
+        Delete a system
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS administration"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> AWS administration</div>-->
+         AWS administration
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change the EC2 instance type"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-change-ec2-instance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-change-ec2-instance.html">
+        Change the EC2 instance type
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Change route tables for HA pairs"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-change-route-tables.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-change-route-tables.html">
+        Change route tables for HA pairs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure placement group creation"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="task-configure-placement-group-failure-aws.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/test/aws/task-configure-placement-group-failure-aws.html">
+        Configure placement group creation
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administration from System Manager"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-administer-advanced-view.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-administer-advanced-view.html">
+        Administration from System Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administration from the CLI"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-connecting-to-otc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-connecting-to-otc.html">
+        Administration from the CLI
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="System health and events"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> System health and events</div>-->
+         System health and events
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verify AutoSupport setup"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-verify-autosupport.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-verify-autosupport.html">
+        Verify AutoSupport setup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure EMS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-configure-ems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/task-configure-ems.html">
+        Configure EMS
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concepts"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Concepts</div>-->
+         Concepts
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licensing"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-licensing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-licensing.html">
+        Licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage</div>-->
+         Storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Client protocols"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-client-protocols.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-client-protocols.html">
+        Client protocols
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disks and aggregates"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-storage.html">
+        Disks and aggregates
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elastic Volumes in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-aws-elastic-volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-aws-elastic-volumes.html">
+        Elastic Volumes in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data tiering"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-data-tiering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-data-tiering.html">
+        Data tiering
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage management"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-storage-management.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-storage-management.html">
+        Storage management
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Write speed"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-write-speed.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-write-speed.html">
+        Write speed
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flash Cache"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-flash-cache.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-flash-cache.html">
+        Flash Cache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="WORM storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-worm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-worm.html">
+        WORM storage
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="High-availability pairs"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> High-availability pairs</div>-->
+         High-availability pairs
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA pairs in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-ha.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-ha.html">
+        HA pairs in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Actions during storage takeover"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-degraded-ha-pair.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/test/aws/concept-degraded-ha-pair.html">
+        Actions during storage takeover
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-security.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-security.html">
+        Security
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-performance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-performance.html">
+        Performance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Management of node-based BYOL"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-license-management.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-license-management.html">
+        Management of node-based BYOL
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AutoSupport and Active IQ Digital Advisor"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/concept-active-iq.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/concept-active-iq.html">
+        AutoSupport and Active IQ Digital Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Default configurations"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/reference-default-configs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/reference-default-configs.html">
+        Default configurations
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Knowledge and support"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/test/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/test/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Knowledge and support</div>-->
+         Knowledge and support
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Register for support"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-support-registration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/task-support-registration.html">
+        Register for support
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get help"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/task-get-help.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/test/aws/task-get-help.html">
+        Get help
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Legal notices"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/whats-new.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/test/aws/legal-notices.html">
+        Legal notices
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/us-en/test"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/us-en/test"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">What's new</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-02-16 20:09:52 +0000">02/16/2024</time>
+        
+    
+    
+        <span>Contributors
+        </span>
+    
+    
+        <a target="_blank" class="ext-link-indicator" href="/us-en/test/feed.xml"><img width="21" height="21" src="/us-en/test/images/rss-button.png" alt="RSS" title="Subscribe to RSS updates for this page" /></a>
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/us-en/test/images/discuss-sm.svg" alt="" class="github-icon" />Suggest changes</span>
+        <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/us-en/test/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/test/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/us-en/test/whats-new.html&page-title=What's new" class="page-nav-contribute-link" role="button">Request doc changes</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/test/blob/main/whats-new.adoc" class="page-nav-contribute-link" role="button">Edit this page</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Learn how to contribute</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>PDFs<img src="/us-en/test/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/us-en/test/pdfs/aws/fullsite-sidebar/Cloud_Volumes_ONTAP_documentation.pdf" >
+                    <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>PDF of this doc site</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Release_notes.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Release notes
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Get_started_in_Amazon_Web_Services.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in Amazon Web Services
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Set_up_your_networking.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Set up your networking
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Get_started_in_Microsoft_Azure.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in Microsoft Azure
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Get_started_in_Google_Cloud.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in Google Cloud
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Google_Cloud_Platform_Image_Verification.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Google Cloud Platform Image Verification
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Image_signature_verification.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Image signature verification
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Use_Cloud_Volumes_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Use Cloud Volumes ONTAP
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/License_management.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            License management
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Volume_and_LUN_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Volume and LUN administration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Aggregate_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Aggregate administration
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Storage_VM_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage VM administration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Security_and_data_encryption.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Security and data encryption
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/System_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            System administration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Add__remove__or_delete_systems.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Add, remove, or delete systems
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/AWS_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            AWS administration
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Azure_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Azure administration
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Google_Cloud_administration.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Google Cloud administration
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/System_health_and_events.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            System health and events
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Concepts.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Concepts
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Storage.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/High_availability_pairs.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            High-availability pairs
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/test/pdfs/aws/sidebar/Knowledge_and_support.pdf" 
+            
+          >
+            <img src="/us-en/test/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Knowledge and support
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/us-en/test/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Learn what's new with Cloud Volumes ONTAP management in BlueXP.</p>
+</div>
+<div class="paragraph">
+<p>The enhancements described on this page are specific to BlueXP features that enable management of Cloud Volumes ONTAP. To learn what's new with the Cloud Volumes ONTAP software itself, <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html" target="_blank" rel="noopener">go to the Cloud Volumes ONTAP Release Notes</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="10-september-2023">10 September 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.33 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="support-for-lsv3-series-vms-in-azure">Support for Lsv3-series VMs in Azure</h3>
+<div class="paragraph">
+<p>The L48s_v3 and L64s_v3 instance types are now supported with Cloud Volumes ONTAP in Azure for single node and high-availability pair deployments with shared managed disks in single and multiple availability zones, starting with the 9.13.1 release. These instance types support Flash Cache.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html">View supported configurations for Cloud Volumes ONTAP in Azure</a><br>
+<a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html">View storage limits for Cloud Volumes ONTAP in Azure</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="30-july-2023">30 July 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.32 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="flash-cache-and-high-write-speed-support-in-google-cloud">Flash Cache and high write speed support in Google Cloud</h3>
+<div class="paragraph">
+<p>Flash Cache and high write speed can be enabled separately in Google Cloud for Cloud Volumes ONTAP 9.13.1 and later. High write speed is available on all supported instance types. Flash Cache is supported on the following instance types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>n2-standard-16</p>
+</li>
+<li>
+<p>n2-standard-32</p>
+</li>
+<li>
+<p>n2-standard-48</p>
+</li>
+<li>
+<p>n2-standard-64</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can use these features separately or together on both single node and high-availability pair deployments.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html">Launch Cloud Volumes ONTAP in Google Cloud</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="usage-reports-enhancements">Usage reports enhancements</h3>
+<div class="paragraph">
+<p>Various improvements to the displayed information within the usage reports are now available. The following are enhancements to the usage reports:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The TiB unit is now included in the name of columns.</p>
+</li>
+<li>
+<p>A new "node(s)" field for serial numbers is now included.</p>
+</li>
+<li>
+<p>A new “Workload Type” column is now included under the Storage VMs usage report.</p>
+</li>
+<li>
+<p>Working environment names now included in Storage VMs and Volume usage reports.</p>
+</li>
+<li>
+<p>Volume type “file” is now labeled “Primary (Read/Write)”.</p>
+</li>
+<li>
+<p>Volume type “secondary” is now labeled “Secondary (DP)”.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information on usage reports, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html#download-usage-reports" target="_blank" rel="noopener">Download usage reports</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="26-july-2023">26 July 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.31 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-13-1-ga">Cloud Volumes ONTAP 9.13.1 GA</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage the Cloud Volumes ONTAP 9.13.1 General Availability release in AWS, Azure, and Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2-july-2023">2 July 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.31 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="support-for-ha-multiple-availability-zone-deployments-in-azure">Support for HA multiple availability zone deployments in Azure</h3>
+<div class="paragraph">
+<p>The Japan East and Korea Central in Azure now supports HA multiple availability zone deployments for Cloud Volumes ONTAP 9.12.1 GA and later.</p>
+</div>
+<div class="paragraph">
+<p>For a list of all regions that support multiple availability zones, see the <a href="https://bluexp.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">Global Regions Map under Azure</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="autonomous-ransomware-protection-support">Autonomous Ransomware Protection support</h3>
+<div class="paragraph">
+<p>Autonomous Ransomware Protection (ARP) is now supported on Cloud Volumes ONTAP. ARP support is available on Cloud Volumes ONTAP version 9.12.1 and higher.</p>
+</div>
+<div class="paragraph">
+<p>To learn more about ARP with Cloud Volumes ONTAP, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#autonomous-ransomware-protection" target="_blank" rel="noopener">Autonomous Ransomware Protection</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="26-june-2023">26 June 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following change was introduced with the 3.9.30 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-13-1-rc1">Cloud Volumes ONTAP 9.13.1 RC1</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.13.1 in AWS, Azure, and Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-june-2023">4 June 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following change was introduced with the 3.9.30 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-upgrade-version-selector-update">Cloud Volumes ONTAP upgrade version selector update</h3>
+<div class="paragraph">
+<p>Through the Upgrade Cloud Volumes ONTAP page, you can now choose to upgrade to the latest available version of Cloud Volumes ONTAP or an older version.</p>
+</div>
+<div class="paragraph">
+<p>To learn more about upgrading Cloud Volumes ONTAP through BlueXP, see <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrade-cloud-volumes-ontap" target="_blank" rel="noopener">Upgrade Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="7-may-2023">7 May 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.29 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="qatar-region-now-supported-in-google-cloud">Qatar region now supported in Google Cloud</h3>
+<div class="paragraph">
+<p>The Qatar region is now supported in Google Cloud for Cloud Volumes ONTAP and the Connector for Cloud Volumes ONTAP 9.12.1 GA and later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sweden-central-region-now-supported-in-azure">Sweden Central region now supported in Azure</h3>
+<div class="paragraph">
+<p>The Sweden Central region is now supported in Azure for Cloud Volumes ONTAP and the Connector for Cloud Volumes ONTAP 9.12.1 GA and later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-ha-multiple-availability-zone-deployments-in-azure-australia-east">Support for HA multiple availability zone deployments in Azure Australia East</h3>
+<div class="paragraph">
+<p>The Australia East region in Azure now supports HA multiple availability zone deployments for Cloud Volumes ONTAP 9.12.1 GA and later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="charging-usage-breakdown">Charging usage breakdown</h3>
+<div class="paragraph">
+<p>Now you can find out what you're being charged for when you're subscribed to capacity-based licenses. The following types of usage reports are available for download from the digital wallet in BlueXP. The usage reports provide capacity details of your subscriptions and tell you how you're being charged for the resources in your Cloud Volumes ONTAP subscriptions. The downloadable reports can be easily shared with others.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Volumes ONTAP package usage</p>
+</li>
+<li>
+<p>High-level usage</p>
+</li>
+<li>
+<p>Storage VMs usage</p>
+</li>
+<li>
+<p>Volumes usage</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html" target="_blank" rel="noopener">Manage capacity-based licenses</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="notification-now-displays-when-accessing-bluexp-without-a-marketplace-subscription">Notification now displays when accessing BlueXP without a marketplace subscription</h3>
+<div class="paragraph">
+<p>A notification now displays whenever you access Cloud Volumes ONTAP in BlueXP without a marketplace subscription. The notification states "a marketplace subscription for this working environment is required to be compliant with Cloud Volumes ONTAP terms and conditions."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-april-2023">4 April 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting with Cloud Volumes ONTAP 9.12.1 GA, China regions are now supported in AWS as follows.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Single node systems are supported.</p>
+</li>
+<li>
+<p>Licenses purchased directly from NetApp are supported.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For regional availability, see <a href="https://bluexp.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">Global Regions Maps for Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-april-2023">3 April 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.28 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="turin-region-now-supported-in-google-cloud">Turin region now supported in Google Cloud</h3>
+<div class="paragraph">
+<p>The Turin region is now supported in Google Cloud for Cloud Volumes ONTAP and the Connector for Cloud Volumes ONTAP 9.12.1 GA and later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bluexp-digital-wallet-enhancement">BlueXP digital wallet enhancement</h3>
+<div class="paragraph">
+<p>The BlueXP digital wallet now shows the licensed capacity that you purchased with marketplace private offers.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html" target="_blank" rel="noopener">Learn how to view the consumed capacity in your account</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-comments-during-volume-creation">Support for comments during volume creation</h3>
+<div class="paragraph">
+<p>This release enables you to make comments when creating an Cloud Volumes ONTAP FlexGroup volume or FlexVol volume when using the API.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bluexp-user-interface-redesign-for-cloud-volumes-ontap-overview-volumes-and-aggregates-pages">BlueXP user interface redesign for Cloud Volumes ONTAP Overview, Volumes, and Aggregates pages</h3>
+<div class="paragraph">
+<p>BlueXP now has a redesigned user interface for Cloud Volumes ONTAP Overview, Volumes, and Aggregates pages. The tile-based design presents more comprehensive information in each tile for a better user experience.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-resource-page-rn.png" alt="This screenshot shows the redesigned BlueXP user interface on the Cloud Volumes ONTAP overview page. Various tiles show storage efficiency, version, capacity distribution, information about the Cloud Volumes ONTAP deployment, volumes, aggregates, replications, and backups."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flexgroup-volumes-viewable-through-cloud-volumes-ontap">FlexGroup Volumes viewable through Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>FlexGroup volumes created through CLI or System Manager directly are now viewable through the redesigned Volumes tile in BlueXP. Identical to the information provided for FlexVol volumes, BlueXP provides detailed information for created FlexGroup volumes through a dedicated Volumes tile.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/test/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Currently, you can only view existing FlexGroup volumes under BlueXP. The ability to create FlexGroup volumes in BlueXP is not available but planned for a future release.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-show-flexgroup-volume.png" alt="A screenshot that shows the FlexGroup volume icon hover text under the Volumes tile."></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-volumes.html" target="_blank" rel="noopener">Learn more about viewing created FlexGroup volumes.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="13-march-2023">13 March 2023</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="china-region-support">China region support</h3>
+<div class="paragraph">
+<p>Starting with Cloud Volumes ONTAP 9.12.1 GA, China region support is now supported in Azure as follows.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Volumes ONTAP is supported in China North 3.</p>
+</li>
+<li>
+<p>Single node systems are supported.</p>
+</li>
+<li>
+<p>Licenses purchased directly from NetApp are supported.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For regional availability, see <a href="https://bluexp.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">Global Regions Maps for Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-march-2023">5 March 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.27 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-13-0">Cloud Volumes ONTAP 9.13.0</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.13.0 in AWS, Azure, and Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="16-tib-and-32-tib-support-in-azure">16 TiB and 32 Tib support in Azure</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP now supports 16 TiB and 32 TiB disk sizes for high availability deployments running on managed disks in Azure.</p>
+</div>
+<div class="paragraph">
+<p>Learn more about <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#supported-disk-sizes" target="_blank" rel="noopener">supported disk sizes in Azure</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mtekm-license">MTEKM license</h3>
+<div class="paragraph">
+<p>The Multi-tenant Encryption Key Management (MTEKM) license is now included with new and existing Cloud Volumes ONTAP systems running version 9.12.1 GA or later.</p>
+</div>
+<div class="paragraph">
+<p>Multi-tenant external key management enables individual storage VMs (SVMs) to maintain their own keys through a KMIP server when using NetApp Volume Encryption.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-encrypting-volumes.html" target="_blank" rel="noopener">Learn how to encrypt volumes with NetApp encryption solutions</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-environments-without-internet">Support for environments without internet</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP is now supported in any cloud environment that has complete isolation from the internet. Only node-based licensing (BYOL) is supported in these environments. Capacity-based licensing is not supported. To get started, manually install the Connector software, log in to the BlueXP console that's running on the Connector, add your BYOL license to the BlueXP digital wallet, and then deploy Cloud Volumes ONTAP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html" target="_blank" rel="noopener">Install the Connector in a location without internet access</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#access-the-local-ui" target="_blank" rel="noopener">Access the BlueXP console on the Connector</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#manage-byol-licenses" target="_blank" rel="noopener">Add an unassigned license</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flash-cache-and-high-write-speed-in-google-cloud">Flash Cache and high write speed in Google Cloud</h3>
+<div class="paragraph">
+<p>Support for Flash Cache, high write speed, and a high maximum transmission unit (MTU) of 8,896 bytes is now available for select instances with the Cloud Volumes ONTAP 9.13.0 release.</p>
+</div>
+<div class="paragraph">
+<p>Learn more about <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html" target="_blank" rel="noopener">supported configurations by license for Google Cloud</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-february-2023">5 February 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.26 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="placement-group-creation-in-aws">Placement group creation in AWS</h3>
+<div class="paragraph">
+<p>A new configuration setting is now available for placement group creation with AWS HA single availability zone (AZ) deployments. Now you can choose to bypass failed placement group creations and allow AWS HA single AZ deployments to complete successfully.</p>
+</div>
+<div class="paragraph">
+<p>For detailed information on how to configure the placement group creation setting, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-configure-placement-group-failure-aws.html#overview" target="_blank" rel="noopener">Configure placement group creation for AWS HA Single AZ</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="private-dns-zone-configuration-update">Private DNS zone configuration update</h3>
+<div class="paragraph">
+<p>A new configuration setting is now available so that you can avoid creating a link between a private DNS zone and a virtual network when using Azure Private Links. Creation is enabled by default.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html#provide-bluexp-with-details-about-your-azure-private-dns" target="_blank" rel="noopener">Provide BlueXP with details about your Azure Private DNS</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="worm-storage-and-data-tiering">WORM storage and data tiering</h3>
+<div class="paragraph">
+<p>You can now enable both data tiering and WORM storage together when you create a Cloud Volumes ONTAP 9.8 system or later. Enabling data tiering with WORM storage allows you to tier the data to an object store in the cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-worm.html" target="_blank" rel="noopener">Learn about WORM storage.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="1-january-2023">1 January 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.25 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="licensing-packages-available-in-google-cloud">Licensing packages available in Google Cloud</h3>
+<div class="paragraph">
+<p>Optimized and Edge Cache capacity-based licensing packages are available for Cloud Volumes ONTAP in the Google Cloud Marketplace as a pay-as-you-go offering or as an annual contract.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages" target="_blank" rel="noopener">Cloud Volumes ONTAP licensing</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="default-configuration-for-cloud-volumes-ontap">Default configuration for Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>The Multi-tenant Encryption Key Management (MTEKM) license is no longer included in new Cloud Volumes ONTAP deployments.</p>
+</div>
+<div class="paragraph">
+<p>For more information on the ONTAP feature licenses automatically installed with Cloud Volumes ONTAP, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html" target="_blank" rel="noopener">Default Configuration for Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="15-december-2022">15 December 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-12-0">Cloud Volumes ONTAP 9.12.0</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.12.0 in AWS and Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="8-december-2022">8 December 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-12-1">Cloud Volumes ONTAP 9.12.1</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.12.1, which includes support for new features and additional cloud provider regions.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-december-2022">4 December 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.24 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="worm-cloud-backup-now-available-during-cloud-volumes-ontap-creation">WORM + Cloud Backup now available during Cloud Volumes ONTAP creation</h3>
+<div class="paragraph">
+<p>The ability to activate both write once, read many (WORM) and Cloud Backup features is now available during the Cloud Volumes ONTAP creation process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="israel-region-now-supported-in-google-cloud">Israel region now supported in Google Cloud</h3>
+<div class="paragraph">
+<p>The Israel region is now supported in Google Cloud for Cloud Volumes ONTAP and the Connector for Cloud Volumes ONTAP 9.11.1 P3 and later.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="15-november-2022">15 November 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.23 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="ontap-s3-license-in-google-cloud">ONTAP S3 license in Google Cloud</h3>
+<div class="paragraph">
+<p>An ONTAP S3 license is now included on new and existing Cloud Volumes ONTAP systems running version 9.12.1 or later in Google Cloud Platform.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/object-storage-management/index.html" target="_blank" rel="noopener">Learn how to configure and manage S3 object storage services in ONTAP</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="6-november-2022">6 November 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.23 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="moving-resource-groups-in-azure">Moving resource groups in Azure</h3>
+<div class="paragraph">
+<p>You can now move a working environment from one resource group to a different resource group in Azure within the same Azure subscription.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-moving-resource-groups-azure.html">Moving resource groups</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ndmp-copy-certification">NDMP-copy certification</h3>
+<div class="paragraph">
+<p>NDMP-copy is now certified for use with Cloud Volume ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>For information on how to configure and use NDMP, see <a href="https://docs.netapp.com/us-en/ontap/ndmp/index.html">NDMP configuration overview</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="managed-disk-encryption-support-for-azure">Managed disk encryption support for Azure</h3>
+<div class="paragraph">
+<p>A new Azure permission has been added that now allows you to encrypt all managed disks upon creation.</p>
+</div>
+<div class="paragraph">
+<p>For more information on this new functionality, see <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-azure-encryption.html">Set up Cloud Volumes ONTAP to use a customer-managed key in Azure</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="18-september-2022">18 September 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.22 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="digital-wallet-enhancements">Digital Wallet enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The Digital Wallet now shows a summary of the Optimized I/O licensing package and the provisioned WORM capacity for Cloud Volumes ONTAP systems across your account.</p>
+<div class="paragraph">
+<p>These details can help you better understand how you're being charged and whether you need to purchase additional capacity.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html">Learn how to view the consumed capacity in your account</a>.</p>
+</div>
+</li>
+<li>
+<p>You can now change from one charging method to the Optimized charging method.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html">Learn how to change charging methods</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="optimize-cost-and-performance">Optimize cost and performance</h3>
+<div class="paragraph">
+<p>You can now optimize the cost and performance of a Cloud Volumes ONTAP system directly from the Canvas.</p>
+</div>
+<div class="paragraph">
+<p>After you select a working environment, you can choose the <strong>Optimize Cost &amp; Performance</strong> option to change the instance type for Cloud Volumes ONTAP. Choosing a smaller-sized instance can help you reduce costs, while changing to a larger-sized instance can help you optimize performance.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-optimize-cost-performance.png" alt="A screenshot of the Optimize Cost &amp; Performance option that's available from the Canvas after you select a working environment."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="autosupport-notifications">AutoSupport notifications</h3>
+<div class="paragraph">
+<p>BlueXP will now generate a notification if a Cloud Volumes ONTAP system is unable to send AutoSupport messages. The notification includes a link to instructions that you can use to troubleshoot networking issues.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="31-july-2022">31 July 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.21 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="mtekm-license-2">MTEKM license</h3>
+<div class="paragraph">
+<p>The Multi-tenant Encryption Key Management (MTEKM) license is now included with new and existing Cloud Volumes ONTAP systems running version 9.11.1 or later.</p>
+</div>
+<div class="paragraph">
+<p>Multi-tenant external key management enables individual storage VMs (SVMs) to maintain their own keys through a KMIP server when using NetApp Volume Encryption.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-encrypting-volumes.html">Learn how to encrypt volumes with NetApp encryption solutions</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proxy-server">Proxy server</h3>
+<div class="paragraph">
+<p>BlueXP now automatically configures your Cloud Volumes ONTAP systems to use the Connector as a proxy server, if an outbound internet connection isn't available to send AutoSupport messages.</p>
+</div>
+<div class="paragraph">
+<p>AutoSupport proactively monitors the health of your system and sends messages to NetApp technical support.</p>
+</div>
+<div class="paragraph">
+<p>The only requirement is to ensure that the Connector's security group allows <em>inbound</em> connections over port 3128. You'll need to open this port after you deploy the Connector.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="change-charging-method">Change charging method</h3>
+<div class="paragraph">
+<p>You can now change the charging method for a Cloud Volumes ONTAP system that uses capacity-based licensing. For example, if you deployed a Cloud Volumes ONTAP system with the Essentials package, you can change it to the Professional package if your business needs changed. This feature is available from the Digital Wallet.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html">Learn how to change charging methods</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="security-group-enhancement">Security group enhancement</h3>
+<div class="paragraph">
+<p>When you create a Cloud Volumes ONTAP working environment, the user interface now enables you to choose whether you want the predefined security group to allow traffic within the selected network only (recommended) or all networks.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-allow-traffic.png" alt="A screenshot that shows the Allow Traffic Within option that's available in the working environment wizard when selecting a security group."></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="18-july-2022">18 July 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="new-licensing-packages-in-azure">New licensing packages in Azure</h3>
+<div class="paragraph">
+<p>Two new capacity-based licensing packages are available for Cloud Volumes ONTAP in Azure when you pay through an Azure Marketplace subscription:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Optimized</strong>: Pay for provisioned capacity and I/O operations separately</p>
+</li>
+<li>
+<p><strong>Edge Cache</strong>: Licensing for <a href="https://cloud.netapp.com/cloud-volumes-edge-cache" target="_blank" rel="noopener">Cloud Volumes Edge Cache</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages">Learn more about these licensing packages</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-july-2022">3 July 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.20 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="digital-wallet">Digital Wallet</h3>
+<div class="paragraph">
+<p>The Digital Wallet now shows you the total consumed capacity in your account and the consumed capacity by licensing package. This can help you understand how you're being charged and whether you need to purchase additional capacity.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-digital-wallet-summary.png" alt="A screenshot that shows the Digital Wallet page for capacity-based licenses. The page provides an overview of the consumed capacity in your account and then breaks down the consumed capacity by licensing package."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="elastic-volumes-enhancement">Elastic Volumes enhancement</h3>
+<div class="paragraph">
+<p>BlueXP now supports the Amazon EBS Elastic Volumes feature when creating a Cloud Volumes ONTAP working environment from the user interface. The Elastic Volumes feature is enabled by default when using gp3 or io1 disks. You can choose the initial capacity based on your storage needs and revise it after Cloud Volumes ONTAP is deployed.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html">Learn more about support for Elastic Volumes in AWS</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ontap-s3-license-in-aws">ONTAP S3 license in AWS</h3>
+<div class="paragraph">
+<p>An ONTAP S3 license is now included on new and existing Cloud Volumes ONTAP systems running version 9.11.0 or later in AWS.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/object-storage-management/index.html" target="_blank" rel="noopener">Learn how to configure and manage S3 object storage services in ONTAP</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-azure-cloud-region-support">New Azure Cloud region support</h3>
+<div class="paragraph">
+<p>Starting with the 9.10.1 release, Cloud Volumes ONTAP is now supported in the Azure West US 3 region.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">View the full list of supported regions for Cloud Volumes ONTAP</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ontap-s3-license-in-azure">ONTAP S3 license in Azure</h3>
+<div class="paragraph">
+<p>An ONTAP S3 license is now included on new and existing Cloud Volumes ONTAP systems running version 9.9.1 or later in Azure.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/object-storage-management/index.html" target="_blank" rel="noopener">Learn how to configure and manage S3 object storage services in ONTAP</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="7-june-2022">7 June 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.19 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-11-1">Cloud Volumes ONTAP 9.11.1</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.11.1, which includes support for new features and additional cloud provider regions.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-advanced-view">New Advanced View</h3>
+<div class="paragraph">
+<p>If you need to perform advanced management of Cloud Volumes ONTAP, you can do so using ONTAP System Manager, which is a management interface that’s provided with an ONTAP system. We have included the System Manager interface directly inside BlueXP so that you don’t need to leave BlueXP for advanced management.</p>
+</div>
+<div class="paragraph">
+<p>This Advanced View is available as a Preview with Cloud Volumes ONTAP 9.10.0 and later. We plan to refine this experience and add enhancements in upcoming releases. Please send us feedback by using the in-product chat.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html">Learn more about the Advanced View</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-amazon-ebs-elastic-volumes">Support for Amazon EBS Elastic Volumes</h3>
+<div class="paragraph">
+<p>Support for the Amazon EBS Elastic Volumes feature with a Cloud Volumes ONTAP aggregate provides better performance and additional capacity, while enabling BlueXP to automatically increase the underlying disk capacity as needed.</p>
+</div>
+<div class="paragraph">
+<p>Support for Elastic Volumes is available starting with <em>new</em> Cloud Volumes ONTAP 9.11.0 systems and with gp3 and io1 EBS disk types.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html">Learn more about support for Elastic Volumes</a>.</p>
+</div>
+<div class="paragraph">
+<p>Note that support for Elastic Volumes requires new AWS permissions for the Connector:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"ec2:DescribeVolumesModifications",
+"ec2:ModifyVolume",</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Be sure to provide these permissions to each set of AWS credentials that you've added to BlueXP. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html" target="_blank" rel="noopener">View the latest Connector policy for AWS</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-deploying-ha-pairs-in-shared-aws-subnets">Support for deploying HA pairs in shared AWS subnets</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP 9.11.1 includes support for AWS VPC sharing. This release of the Connector enables you to deploy an HA pair in an AWS shared subnet when using the API.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-deploy-aws-shared-vpc.html">Learn how to deploy an HA pair in a shared subnet</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="limited-network-access-when-using-service-endpoints">Limited network access when using service endpoints</h3>
+<div class="paragraph">
+<p>BlueXP now limits network access when using a VNet service endpoint for connections between Cloud Volumes ONTAP and storage accounts. BlueXP uses a service endpoint if you disable Azure Private Link connections.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html">Learn more about Azure Private Link connections with Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-creating-storage-vms-in-google-cloud">Support for creating storage VMs in Google Cloud</h3>
+<div class="paragraph">
+<p>Multiple storage VMs are now supported with Cloud Volumes ONTAP in Google Cloud, starting with the 9.11.1 release. Starting with this release of the Connector, BlueXP enables you to create storage VMs on Cloud Volumes ONTAP HA pairs in Google Cloud by using the API.</p>
+</div>
+<div class="paragraph">
+<p>Support for creating storage VMs requires new Google Cloud permissions for the Connector:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- compute.instanceGroups.get
+- compute.addresses.get</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you must use the ONTAP CLI or System Manager to create a storage VM on a single node system.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html#storage-vm-limits" target="_blank" rel="noopener">Learn more about storage VM limits in Google Cloud</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html">Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Google Cloud</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2-may-2022">2 May 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.18 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-11-0">Cloud Volumes ONTAP 9.11.0</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.11.0.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9110-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-to-mediator-upgrades">Enhancement to mediator upgrades</h3>
+<div class="paragraph">
+<p>When BlueXP upgrades the mediator for an HA pair, it now validates that a new mediator image is available before it deletes the boot disk. This change ensures that the mediator can continue to operate successfully if the upgrade process is unsuccessful.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="k8s-tab-has-been-removed">K8s tab has been removed</h3>
+<div class="paragraph">
+<p>The K8s tab was deprecated in a previous and has now been removed. If you want to use Kubernetes with Cloud Volumes ONTAP, you can add managed-Kubernetes clusters to the Canvas as a working environment for advanced data management.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-kubernetes/concept-kubernetes.html" target="_blank" rel="noopener">Learn about Kubernetes data management in BlueXP</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="annual-contract-in-azure">Annual contract in Azure</h3>
+<div class="paragraph">
+<p>The Essentials and Professional packages are now available in Azure through an annual contract. You can contact your NetApp sales representative to purchase an annual contract. The contract is available as a private offer in the Azure Marketplace.</p>
+</div>
+<div class="paragraph">
+<p>After NetApp shares the private offer with you, you can select the annual plan when you subscribe from the Azure Marketplace during working environment creation.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html">Learn more about licensing</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s3-glacier-instant-retrieval">S3 Glacier Instant Retrieval</h3>
+<div class="paragraph">
+<p>You can now store tiered data in the Amazon S3 Glacier Instant Retrieval storage class.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#changing-the-storage-class-for-tiered-data">Learn how to change the storage class for tiered data</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-aws-permissions-required-for-the-connector">New AWS permissions required for the Connector</h3>
+<div class="paragraph">
+<p>The following permissions are now required to create an AWS spread placement group when deploying an HA pair in a single Availability Zone (AZ):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"ec2:DescribePlacementGroups",
+"iam:GetRolePolicy",</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These permissions are now required to optimize how BlueXP creates the placement group.</p>
+</div>
+<div class="paragraph">
+<p>Be sure to provide these permissions to each set of AWS credentials that you've added to BlueXP. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html" target="_blank" rel="noopener">View the latest Connector policy for AWS</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-google-cloud-region-support">New Google Cloud region support</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP is now supported in the following Google Cloud regions starting with the 9.10.1 release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Delhi (asia-south2)</p>
+</li>
+<li>
+<p>Melbourne (australia-southeast2)</p>
+</li>
+<li>
+<p>Milan (europe-west8) - single node only</p>
+</li>
+<li>
+<p>Santiago (southamerica-west1) - single node only</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">View the full list of supported regions for Cloud Volumes ONTAP</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-n2-standard-16-in-google-cloud">Support for n2-standard-16 in Google Cloud</h3>
+<div class="paragraph">
+<p>The n2-standard-16 machine type is now supported with Cloud Volumes ONTAP in Google Cloud, starting with the 9.10.1 release.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html" target="_blank" rel="noopener">View supported configurations for Cloud Volumes ONTAP in Google Cloud</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancements-to-google-cloud-firewall-policies">Enhancements to Google Cloud firewall policies</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When you create a Cloud Volumes ONTAP HA pair in Google Cloud, BlueXP will now display all existing firewall policies in a VPC.</p>
+<div class="paragraph">
+<p>Previously, BlueXP wouldn't display any policies in VPC-1, VPC-2, or VPC-3 that didn't have a target tag.</p>
+</div>
+</li>
+<li>
+<p>When you create a Cloud Volumes ONTAP single node system in Google Cloud, you can now choose whether you want the predefined firewall policy to allow traffic within the selected VPC only (recommended) or all VPCs.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-to-google-cloud-service-accounts">Enhancement to Google Cloud service accounts</h3>
+<div class="paragraph">
+<p>When you select the Google Cloud service account to use with Cloud Volumes ONTAP, BlueXP now displays the email address that's associated with each service account. Viewing the email address can make it easier to distinguish between service accounts that share the same name.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-google-cloud-service-account.png" alt="A screenshot of the service account field"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-april-2022">3 April 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="system-manager-link-has-been-removed">System Manager link has been removed</h3>
+<div class="paragraph">
+<p>We have removed the System Manager link that was previously available from within a Cloud Volumes ONTAP working environment.</p>
+</div>
+<div class="paragraph">
+<p>You can still connect to System Manager by entering the cluster management IP address in a web browser that has a connection to the Cloud Volumes ONTAP system. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-connecting-to-otc.html">Learn more about connecting to System Manager</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="charging-for-worm-storage">Charging for WORM storage</h3>
+<div class="paragraph">
+<p>Now that the introductory special rate has expired, you will now be charged for using WORM storage. Charging is hourly, according to the total provisioned capacity of WORM volumes. This applies to new and existing Cloud Volumes ONTAP systems.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/pricing" target="_blank" rel="noopener">Learn about pricing for WORM storage</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="27-february-2022">27 February 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.16 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="redesigned-volume-wizard">Redesigned volume wizard</h3>
+<div class="paragraph">
+<p>The create new volume wizard that we recently introduced is now available when creating a volume on a specific aggregate from the <strong>Advanced allocation</strong> option.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.html">Learn how to create volumes on a specific aggregate</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="9-february-2022">9 February 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="marketplace-updates">Marketplace updates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The Essentials package and Professional package are now available in all cloud provider marketplaces.</p>
+<div class="paragraph">
+<p>These by-capacity charging methods enable you to pay by the hour or to purchase an annual contract directly from your cloud provider. You still have the option to purchase a by-capacity license directly from NetApp.</p>
+</div>
+<div class="paragraph">
+<p>If you have an existing subscription in a cloud marketplace, you're automatically subscribed to these new offerings as well. You can choose by-capacity charging when you deploy a new Cloud Volumes ONTAP working environment.</p>
+</div>
+<div class="paragraph">
+<p>If you're a new customer, BlueXP will prompt you to subscribe when you create a new working environment.</p>
+</div>
+</li>
+<li>
+<p>By-node licensing from all cloud provider marketplaces is deprecated and no longer available for new subscribers. This includes annual contracts and hourly subscriptions (Explore, Standard, and Premium).</p>
+<div class="paragraph">
+<p>This charging method is still available for existing customers who have an active subscription.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html">Learn more about the licensing options for Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="6-february-2022">6 February 2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="exchange-unassigned-licenses">Exchange unassigned licenses</h3>
+<div class="paragraph">
+<p>If you have an unassigned node-based license for Cloud Volumes ONTAP that you haven't used, you can now exchange the license by converting it to a Cloud Backup license, Cloud Data Sense license, or Cloud Tiering license.</p>
+</div>
+<div class="paragraph">
+<p>This action revokes the Cloud Volumes ONTAP license and creates a dollar-equivalent license for the service with the same expiry date.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses">Learn how to exchange unassigned node-based licenses</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="30-january-2022">30 January 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.15 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="redesigned-licensing-selection">Redesigned licensing selection</h3>
+<div class="paragraph">
+<p>We redesigned the licensing selection screen when creating a new Cloud Volumes ONTAP working environment. The changes highlight the by-capacity charging methods that were introduced in July 2021 and support upcoming offerings through the cloud provider marketplaces.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="digital-wallet-update">Digital Wallet update</h3>
+<div class="paragraph">
+<p>We updated the <strong>Digital Wallet</strong> by consolidating Cloud Volumes ONTAP licenses in a single tab.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2-january-2022">2 January 2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.14 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="support-for-additional-azure-vm-types">Support for additional Azure VM types</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP is now supported with the following VM types in Microsoft Azure, starting with the 9.10.1 release:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>E4ds_v4</p>
+</li>
+<li>
+<p>E8ds_v4</p>
+</li>
+<li>
+<p>E32ds_v4</p>
+</li>
+<li>
+<p>E48ds_v4</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Go to the <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes" target="_blank" rel="noopener">Cloud Volumes ONTAP Release Notes</a> for more details about supported configurations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flexclone-charging-update">FlexClone charging update</h3>
+<div class="paragraph">
+<p>If you use a <a href="concept-licensing.html" target="_blank" rel="noopener">capacity-based license</a> for Cloud Volumes ONTAP, you are no longer charged for the capacity used by FlexClone volumes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="charging-method-now-displayed">Charging method now displayed</h3>
+<div class="paragraph">
+<p>BlueXP now shows the charging method for each Cloud Volumes ONTAP working environment in the right panel of the Canvas.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-cvo-charging-method.png" alt="A screenshot that shows the charging method for a Cloud Volumes ONTAP working environment which appears in the right panel after selecting a working environment from the Canvas."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="choose-your-user-name">Choose your user name</h3>
+<div class="paragraph">
+<p>When you create a Cloud Volumes ONTAP working environment, you now have the option to enter your preferred user name, instead of the default admin user name.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-cvo-user-name.png" alt="A screenshot of the Details and Credentials page in the working environment wizard where you can specify a user name."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="volume-creation-enhancements">Volume creation enhancements</h3>
+<div class="paragraph">
+<p>We made a few enhancements to volume creation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>We redesigned the create volume wizard for ease of use.</p>
+</li>
+<li>
+<p>Tags that you add to a volume are now associated with the Application Templates service, which can help you organize and simplify the management of your resources.</p>
+</li>
+<li>
+<p>You can now choose a custom export policy for NFS.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-cvo-create-volume.png" alt="A screenshot that shows the Protocol page when creating a new volume."></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="28-november-2021">28 November 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.13 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-10-1">Cloud Volumes ONTAP 9.10.1</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.10.1.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="netapp-keystone-subscriptions">NetApp Keystone Subscriptions</h3>
+<div class="paragraph">
+<p>You can now use Keystone Subscriptions to pay for Cloud Volumes ONTAP HA pairs.</p>
+</div>
+<div class="paragraph">
+<p>A Keystone Subscription is a pay-as-you-grow subscription-based service that delivers a seamless hybrid cloud experience for those preferring OpEx consumption models to upfront CapEx or leasing.</p>
+</div>
+<div class="paragraph">
+<p>A Keystone Subscription is supported with all new versions of Cloud Volumes ONTAP that you can deploy from BlueXP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.netapp.com/services/keystone/" target="_blank" rel="noopener">Learn more about NetApp Keystone Subscriptions</a>.</p>
+</li>
+<li>
+<p><a href="task-manage-keystone.html" target="_blank" rel="noopener">Learn how to get started with Keystone Subscriptions in BlueXP</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-aws-region-support">New AWS region support</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP is now supported in the AWS Asia Pacific (Osaka) region (ap-northeast-3).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="port-reduction">Port reduction</h3>
+<div class="paragraph">
+<p>Ports 8023 and 49000 are no longer open on Cloud Volumes ONTAP systems in Azure for both single node systems and HA pairs.</p>
+</div>
+<div class="paragraph">
+<p>This change applies to <em>new</em> Cloud Volumes ONTAP systems starting with the 3.9.13 release of the Connector.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-october-2021">4 October 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.11 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-10-0">Cloud Volumes ONTAP 9.10.0</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.10.0.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9100-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reduced-deployment-time">Reduced deployment time</h3>
+<div class="paragraph">
+<p>We reduced the amount of time that it takes to deploy a Cloud Volumes ONTAP working environment in Microsoft Azure or in Google Cloud when normal write speed is enabled. The deployment time is now 3-4 minutes shorter on average.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="2-september-2021">2 September 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.10 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="customer-managed-encryption-key-in-azure">Customer-managed encryption key in Azure</h3>
+<div class="paragraph">
+<p>Data is automatically encrypted on Cloud Volumes ONTAP in Azure using <a href="https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/" target="_blank" rel="noopener">Azure Storage Service Encryption</a> with a Microsoft-managed key. But you can now use your own customer-managed encryption key instead by completing the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From Azure, create a key vault and then generate a key in that vault.</p>
+</li>
+<li>
+<p>From BlueXP, use the API to create a Cloud Volumes ONTAP working environment that uses the key.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="task-set-up-azure-encryption.html">Learn more about these steps</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="7-july-2021">7 July 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.8 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="new-charging-methods">New charging methods</h3>
+<div class="paragraph">
+<p>New charging methods are available for Cloud Volumes ONTAP.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Capacity-based BYOL</strong>: A capacity-based license enables you to pay for Cloud Volumes ONTAP per TiB of capacity. The license is associated with your NetApp account and enables you to create as multiple Cloud Volumes ONTAP systems, as long as enough capacity is available through your license. Capacity-based licensing is available in the form of a package, either <em>Essentials</em> or <em>Professional</em>.</p>
+</li>
+<li>
+<p><strong>Freemium offering</strong>: Freemium enables you to use all Cloud Volumes ONTAP features free of charge from NetApp (cloud provider charges still apply). You're limited to 500 GiB of provisioned capacity per system and there’s no support contract. You can have up to 10 Freemium systems.</p>
+<div class="paragraph">
+<p><a href="concept-licensing.html">Learn more about these licensing options</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here's an example of the charging methods that you can choose from:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cvo_charging_methods.png" alt="A screenshot of the Cloud Volumes ONTAP working environment wizard where you can choose a charging method."></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="worm-storage-available-for-general-use">WORM storage available for general use</h3>
+<div class="paragraph">
+<p>Write once, read many (WORM) storage is no longer in Preview and is now available for general use with Cloud Volumes ONTAP. <a href="concept-worm.html">Learn more about WORM storage</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-m5dn-24xlarge-in-aws">Support for m5dn.24xlarge in AWS</h3>
+<div class="paragraph">
+<p>Starting with the 9.9.1 release, Cloud Volumes ONTAP now supports the m5dn.24xlarge instance type with the following charging methods: PAYGO Premium, bring your own license (BYOL), and Freemium.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html" target="_blank" rel="noopener">View supported configurations for Cloud Volumes ONTAP in AWS</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="select-existing-azure-resource-groups">Select existing Azure resource groups</h3>
+<div class="paragraph">
+<p>When creating a Cloud Volumes ONTAP system in Azure, you now have the option to select an existing resource group for the VM and its associated resources.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_azure_resource_group.png" alt="A screenshot of the Create Working Environment wizard where you can select an existing resource group."></span></p>
+</div>
+<div class="paragraph">
+<p>The following permissions enable BlueXP to remove Cloud Volumes ONTAP resources from a resource group, in case of deployment failure or deletion:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Network/privateEndpoints/delete",
+"Microsoft.Compute/availabilitySets/delete",</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Be sure to provide these permissions to each set of Azure credentials that you've added to BlueXP. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html" target="_blank" rel="noopener">View the latest Connector policy for Azure</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="blob-public-access-now-disabled-in-azure">Blob public access now disabled in Azure</h3>
+<div class="paragraph">
+<p>As a security enhancement, BlueXP now disables <strong>Blob public access</strong> when creating a storage account for Cloud Volumes ONTAP.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="azure-private-link-enhancement">Azure Private Link enhancement</h3>
+<div class="paragraph">
+<p>By default, BlueXP now enables an Azure Private Link connection on the boot diagnostics storage account for new Cloud Volumes ONTAP systems.</p>
+</div>
+<div class="paragraph">
+<p>This means <em>all</em> storage accounts for Cloud Volumes ONTAP will now use a private link.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-enabling-private-link.html">Learn more about using an Azure Private Link with Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="balanced-persistent-disks-in-google-cloud">Balanced persistent disks in Google Cloud</h3>
+<div class="paragraph">
+<p>Starting with the 9.9.1 release, Cloud Volumes ONTAP now supports Balanced persistent disks (pd-balanced).</p>
+</div>
+<div class="paragraph">
+<p>These SSDs balance performance and cost by providing lower IOPS per GiB.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-4-16384-no-longer-supported-in-google-cloud">custom-4-16384 no longer supported in Google Cloud</h3>
+<div class="paragraph">
+<p>The custom-4-16384 machine type is no longer supported with new Cloud Volumes ONTAP systems.</p>
+</div>
+<div class="paragraph">
+<p>If you have an existing system running on this machine type, you can keep using it, but we recommend switching to the n2-standard-4 machine type.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html" target="_blank" rel="noopener">View supported configurations for Cloud Volumes ONTAP in GCP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="30-may-2021">30 May 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.7 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="new-professional-package-in-aws">New Professional Package in AWS</h3>
+<div class="paragraph">
+<p>A new Professional Package enables you to bundle Cloud Volumes ONTAP and Cloud Backup Service by using an annual contract from the AWS Marketplace. Payment is per TiB. This subscription doesn't enable you to back up on-prem data.</p>
+</div>
+<div class="paragraph">
+<p>If you choose this payment option, you can provision up to 2 PiB per Cloud Volumes ONTAP system through EBS disks and tiering to S3 object storage (single node or HA).</p>
+</div>
+<div class="paragraph">
+<p>Go to the <a href="https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri" target="_blank" rel="noopener">AWS Marketplace page</a> to view pricing details and go to the <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes" target="_blank" rel="noopener">Cloud Volumes ONTAP Release Notes</a> to learn more about this licensing option.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tags-on-ebs-volumes-in-aws">Tags on EBS volumes in AWS</h3>
+<div class="paragraph">
+<p>BlueXP now adds tags to EBS volumes when it creates a new Cloud Volumes ONTAP working environment. The tags were previously created after Cloud Volumes ONTAP was deployed.</p>
+</div>
+<div class="paragraph">
+<p>This change can help if your organization uses service control policies (SCPs) to manage permissions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="minimum-cooling-period-for-auto-tiering-policy">Minimum cooling period for auto tiering policy</h3>
+<div class="paragraph">
+<p>If you enabled data tiering on a volume using the <em>auto</em> tiering policy, you can now adjust the minimum cooling period using the API.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-tiering.html#changing-the-cooling-period-for-the-auto-tiering-policy">Learn how to adjust the minimum cooling period.</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-to-custom-export-policies">Enhancement to custom export policies</h3>
+<div class="paragraph">
+<p>When you create a new NFS volume, BlueXP now displays custom export policies in ascending order, making it easier for you to find the export policy that you need.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deletion-of-old-cloud-snapshots">Deletion of old cloud snapshots</h3>
+<div class="paragraph">
+<p>BlueXP now deletes older cloud snapshots of root and boot disks that are created when a Cloud Volumes ONTAP system is deployed and every time its powered down. Only the two most recent snapshots are retained for both the root and boot volumes.</p>
+</div>
+<div class="paragraph">
+<p>This enhancement helps reduce cloud provider costs by removing snapshots that are no longer needed.</p>
+</div>
+<div class="paragraph">
+<p>Note that a Connector requires a new permission to delete Azure snapshots. <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html" target="_blank" rel="noopener">View the latest Connector policy for Azure</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Compute/snapshots/delete"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="24-may-2021">24 May 2021</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-9-1">Cloud Volumes ONTAP 9.9.1</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.9.1.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-991-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="11-apr-2021">11 Apr 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.5 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="logical-space-reporting">Logical space reporting</h3>
+<div class="paragraph">
+<p>BlueXP now enables logical space reporting on the initial storage VM that it creates for Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>When space is reported logically, ONTAP reports the volume space such that all the physical space saved by the storage efficiency features are also reported as used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-gp3-disks-in-aws">Support for gp3 disks in AWS</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP now supports <em>General Purpose SSD (gp3)</em> disks, starting with the 9.7 release. gp3 disks are the lowest-cost SSDs that balance cost and performance for a broad range of workloads.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-planning-your-config.html#sizing-your-system-in-aws">Learn more about using gp3 disks with Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cold-hdd-disks-no-longer-supported-in-aws">Cold HDD disks no longer supported in AWS</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP no longer supports Cold HDD (sc1) disks.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tls-1-2-for-azure-storage-accounts">TLS 1.2 for Azure storage accounts</h3>
+<div class="paragraph">
+<p>When BlueXP creates storage accounts in Azure for Cloud Volumes ONTAP, the TLS version for the storage account is now version 1.2.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="8-mar-2021">8 Mar 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.4 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-9-9-0">Cloud Volumes ONTAP 9.9.0</h3>
+<div class="paragraph">
+<p>BlueXP can now deploy and manage Cloud Volumes ONTAP 9.9.0.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-990-relnotes" target="_blank" rel="noopener">Learn about the new features included in this release of Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-the-aws-c2s-environment">Support for the AWS C2S environment</h3>
+<div class="paragraph">
+<p>You can now deploy Cloud Volumes ONTAP 9.8 in the AWS Commercial Cloud Services (C2S) environment.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-getting-started-aws-c2s.html">Learn how to get started in C2S</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="aws-encryption-with-customer-managed-cmks">AWS encryption with customer-managed CMKs</h3>
+<div class="paragraph">
+<p>BlueXP has always enabled you to encrypt Cloud Volumes ONTAP data using the AWS Key Management Service (KMS). Starting with Cloud Volumes ONTAP 9.9.0, data on EBS disks and data tiered to S3 are encrypted if you select a customer-managed CMK. Previously, only EBS data would be encrypted.</p>
+</div>
+<div class="paragraph">
+<p>Note that you'll need to provide the Cloud Volumes ONTAP IAM role with access to use the CMK.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-setting-up-kms.html">Learn more about setting up the AWS KMS with Cloud Volumes ONTAP</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-azure-dod">Support for Azure DoD</h3>
+<div class="paragraph">
+<p>You can now deploy Cloud Volumes ONTAP 9.8 in the Azure Department of Defense (DoD) Impact Level 6 (IL6).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ip-address-reduction-in-google-cloud">IP address reduction in Google Cloud</h3>
+<div class="paragraph">
+<p>We've reduced the number of IP addresses that are required for Cloud Volumes ONTAP 9.8 and later in Google Cloud. By default, one less IP address is required (we unified the intercluster LIF with the node management LIF). You also have the option to skip the creation of the SVM management LIF when using the API, which would reduce the need for an additional IP address.</p>
+</div>
+<div class="paragraph">
+<p><a href="reference-networking-gcp.html#requirements-for-cloud-volumes-ontap">Learn more about IP address requirements in Google Cloud</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="shared-vpc-support-in-google-cloud">Shared VPC support in Google Cloud</h3>
+<div class="paragraph">
+<p>When you deploy a Cloud Volumes ONTAP HA pair in Google Cloud, you can now choose shared VPCs for VPC-1, VPC-2, and VPC-3. Previously, only VPC-0 could be a shared VPC. This change is supported with Cloud Volumes ONTAP 9.8 and later.</p>
+</div>
+<div class="paragraph">
+<p><a href="reference-networking-gcp.html">Learn more about Google Cloud networking requirements</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-jan-2021">4 Jan 2021</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.2 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="aws-outposts">AWS Outposts</h3>
+<div class="paragraph">
+<p>A few months ago, we announced that Cloud Volumes ONTAP had achieved the Amazon Web Services (AWS) Outposts Ready designation. Today, we're pleased to announce that we've validated BlueXP and Cloud Volumes ONTAP with AWS Outposts.</p>
+</div>
+<div class="paragraph">
+<p>If you have an AWS Outpost, you can deploy Cloud Volumes ONTAP in that Outpost by selecting the Outpost VPC in the Working Environment wizard. The experience is the same as any other VPC that resides in AWS. Note that you will need to first deploy a Connector in your AWS Outpost.</p>
+</div>
+<div class="paragraph">
+<p>There are a few limitations to point out:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Only single node Cloud Volumes ONTAP systems are supported at this time</p>
+</li>
+<li>
+<p>The EC2 instances that you can use with Cloud Volumes ONTAP are limited to what's available in your Outpost</p>
+</li>
+<li>
+<p>Only General Purpose SSDs (gp2) are supported at this time</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ultra-ssd-vnvram-in-supported-azure-regions">Ultra SSD VNVRAM in supported Azure regions</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP can now use an Ultra SSD as VNVRAM when you use the E32s_v3 VM type with a single node system <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd" target="_blank" rel="noopener">in any supported Azure region</a>.</p>
+</div>
+<div class="paragraph">
+<p>VNVRAM provides better write performance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="choose-an-availability-zone-in-azure">Choose an Availability Zone in Azure</h3>
+<div class="paragraph">
+<p>You can now choose the Availability Zone in which you'd like to deploy a single node Cloud Volumes ONTAP system. If you don't select an AZ, BlueXP will select one for you.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_azure_az.gif" alt="A screenshot of the Availability Zone drop-down list that's available after choosing a region."></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="larger-disks-in-google-cloud">Larger disks in Google Cloud</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP now supports 64 TB disks in GCP.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/test/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The maximum system capacity with disks alone remains at 256 TB due to GCP limits.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="new-machine-types-in-google-cloud">New machine types in Google Cloud</h3>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP now supports the following machine types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>n2-standard-4 with the Explore license and with BYOL</p>
+</li>
+<li>
+<p>n2-standard-8 with the Standard license and with BYOL</p>
+</li>
+<li>
+<p>n2-standard-32 with the Premium license and with BYOL</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-nov-2020">3 Nov 2020</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were introduced with the 3.9.0 release of the Connector.</p>
+</div>
+<div class="sect2">
+<h3 id="azure-private-link-for-cloud-volumes-ontap">Azure Private Link for Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>By default, BlueXP now enables an Azure Private Link connection between Cloud Volumes ONTAP and its associated storage accounts. A Private Link secures connections between endpoints in Azure.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/private-link/private-link-overview" target="_blank" rel="noopener">Learn more about Azure Private Links</a></p>
+</li>
+<li>
+<p><a href="task-enabling-private-link.html" target="_blank" rel="noopener">Learn more about using an Azure Private Link with Cloud Volumes ONTAP</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/us-en/test/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/us-en/test/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">On this page</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of use</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie settings</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/test/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/test/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/test/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/test/js/ie-tabbed-blocks.js'></script>
+    <script src='/us-en/test/js/ie-sidebar.js'></script>
+  </body>
+
+</html>

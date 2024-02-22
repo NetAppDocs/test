@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-active-iq.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-aws-elastic-volumes.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-client-protocols.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-cvo-aiq-digital-advisor.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-data-tiering.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-degraded-ha-pair.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-flash-cache.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-gcp-image-verification.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-gcp-verify-signed-image.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-ha-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-ha-google-cloud.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-ha.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-license-management.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-licensing.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-overview-cvo.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-performance.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-security.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-storage-management.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-storage.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-worm.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/concept-write-speed.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/google-cloud.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/</loc>
+        
+      
+      <lastmod>2024-02-16T20:08:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/legal-notices.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:08:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-default-configs.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-limitations.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-networking-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-networking-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-networking-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-security-groups.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-versions.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/reference-vpc-service-controls-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test//search.html</loc>
+        
+      
+      <lastmod>2024-02-22T19:49:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-accelerate-data-access.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-adding-systems.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-administer-advanced-view.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-aws-key-management.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-azure-high-availability-mode.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-azure-key-vault.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-change-azure-vm.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-change-ec2-instance.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-change-gcp-machine.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-change-password.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-change-route-tables.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-configure-ems.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-configure-placement-group-failure-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-connect-lun.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-connecting-to-otc.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-create-aggregates.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-create-volumes.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-creating-gcp-service-account.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-deleting-working-env.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-deploy-aws-shared-vpc.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-deploying-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-deploying-otc-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-deploying-otc-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-enabling-private-link.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-encrypting-volumes.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-gcp-convert-image-raw.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-get-help.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-getting-started-aws-c2s.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-getting-started-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-getting-started-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-getting-started-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-google-key-manager.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-aggregates.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-capacity-licenses.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-capacity-settings.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-keystone.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-node-licenses.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-svm-dr.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-manage-volumes.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-managing-state.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-managing-svms-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-managing-svms-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-managing-svms-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-managing-svms.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-modify-write-speed.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-moving-resource-groups-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-overriding-cifs-locks.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-planning-your-config-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-planning-your-config-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-planning-your-config.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-protecting-ransomware.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-registering.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-removing.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-set-up-azure-encryption.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-set-up-iam-roles.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-set-up-licensing-aws.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-set-up-licensing-azure.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-set-up-licensing-google.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-setting-up-gcp-encryption.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-setting-up-kms.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-setting-up-transit-gateway.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-support-registration.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-sync-time.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-tiering.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-updating-ontap-cloud.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-verify-autosupport.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/task-verify-openssl-gcp.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/whats-new-ontap.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/test/whats-new.html</loc>
+        
+      
+      <lastmod>2024-02-16T20:09:52+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
