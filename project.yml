@@ -4,9 +4,9 @@ settings:
   harmony_integration: maestro
   platform: cloud
   internal:
-    pdf_enabled: false
-  prod:
     pdf_enabled: true
+  prod:
+    pdf_enabled: false
     harmony_enabled: true
   rss_page: "whats-new.html"
   versions:
