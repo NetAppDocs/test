@@ -1,4 +1,3 @@
-jekyll: private-public-issue
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
