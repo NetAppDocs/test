@@ -6,8 +6,8 @@ settings:
   internal:
     pdf_enabled: false
   prod:
-    pdf_enabled: true
-    harmony_enabled: true
+    pdf_enabled: false
+    harmony_enabled: false
   rss_page: "whats-new.html"
   versions:
     - name: Cloud Volumes ONTAP 
