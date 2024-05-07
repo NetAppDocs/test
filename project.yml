@@ -8,6 +8,7 @@ settings:
   prod:
     pdf_enabled: false
     harmony_enabled: false
+    lipi_enabled: false
   rss_page: "whats-new.html"
   versions:
     - name: Cloud Volumes ONTAP 
