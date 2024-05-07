@@ -1,3 +1,4 @@
+jekyll: asset-centralization
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
