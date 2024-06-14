@@ -1,4 +1,4 @@
-jekyll: staging
+jekyll: bn-remove-ghactions
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
