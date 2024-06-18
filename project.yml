@@ -1,4 +1,4 @@
-jekyll: bnorberg-ruby33
+jekyll: ruby-31
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
@@ -8,6 +8,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
+    termcheck_enabled: true
   rss_page: "whats-new.html"
   versions:
     - name: Cloud Volumes ONTAP 
