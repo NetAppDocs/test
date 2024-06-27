@@ -1,4 +1,3 @@
-jekyll: ruby-31
 settings:
   name: Cloud Volumes ONTAP
   harmony_integration: maestro
